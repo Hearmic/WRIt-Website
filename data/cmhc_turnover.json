@@ -1,0 +1,114 @@
+{
+ "meta": {
+  "edition": "2025",
+  "release_date": "December 11, 2025",
+  "period": "2025-10",
+  "workbook_url": "https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-canada-2025-en.xlsx?rev=11bbba5e-64a5-4dcd-a81f-7252c2b12537",
+  "sheet": "Table 6.0",
+  "table_title": "6.0 Average Rent for Turnover and Non-turnover Units  Privately Initiated Apartment Structures of Three Units and Over - Provinces and Major Centres",
+  "geography": "Toronto CMA",
+  "universe": "Privately initiated apartment structures of three units and over",
+  "editions_used": [
+   {
+    "edition": "2025",
+    "published": "December 11, 2025",
+    "url": "https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-canada-2025-en.xlsx?rev=11bbba5e-64a5-4dcd-a81f-7252c2b12537",
+    "sheet": "Table 6.0",
+    "table_title": "6.0 Average Rent for Turnover and Non-turnover Units  Privately Initiated Apartment Structures of Three Units and Over - Provinces and Major Centres"
+   },
+   {
+    "edition": "2024",
+    "published": "December 17, 2024",
+    "url": "https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2024/rmr-canada-2024-en.xlsx?rev=7dcf3c22-1bec-47b5-a8f6-90d3d7a0cfea",
+    "sheet": "Table 6.0",
+    "table_title": "6.0 Average Rent and Average Change in Rent for Turnover and Non-turnover Units, Two Bedrooms Only   Privately Initiated Apartment Structures of Three Units and Over - Provinces and Major Centres"
+   },
+   {
+    "edition": "2023",
+    "published": "January 31, 2024",
+    "url": "https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2023/rmr-canada-2023-en.xlsx?rev=1a17baec-1321-4187-942b-847eef396682",
+    "sheet": "Table 6.0",
+    "table_title": "6.0 Average Rent and Average Change in Rent for Turnover and Non-turnover Units, Two Bedrooms Only   Privately Initiated Apartment Structures of Three Units and Over - Provinces and Major Centres"
+   },
+   {
+    "edition": "2022",
+    "published": "January 26, 2023",
+    "url": "https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2022/rmr-canada-2022-en.xlsx?rev=f63f0463-58c5-4174-b14d-7acef593127d",
+    "sheet": "Table 6.0",
+    "table_title": "6.0 Average Rent and Average Change in Rent for Turnover and Non-turnover Units, Two Bedrooms Only   Privately Initiated Apartment Structures of Three Units and Over - Provinces and Major Centres"
+   }
+  ],
+  "editions_without_table": [
+   "2021",
+   "2020",
+   "2019"
+  ],
+  "quality_codes": "a Excellent, b Very good, c Good, d Poor (use with caution)"
+ },
+ "by_size": [
+  {
+   "size": "Studio",
+   "new_tenant": 1708,
+   "sitting_tenant": 1443,
+   "gap": 265,
+   "quality_new": "a",
+   "quality_sitting": "a"
+  },
+  {
+   "size": "1-bedroom",
+   "new_tenant": 2073,
+   "sitting_tenant": 1711,
+   "gap": 362,
+   "quality_new": "a",
+   "quality_sitting": "a"
+  },
+  {
+   "size": "2-bedroom",
+   "new_tenant": 2547,
+   "sitting_tenant": 1984,
+   "gap": 563,
+   "quality_new": "a",
+   "quality_sitting": "a"
+  },
+  {
+   "size": "3-bedroom+",
+   "new_tenant": 2893,
+   "sitting_tenant": 2263,
+   "gap": 630,
+   "quality_new": "a",
+   "quality_sitting": "a"
+  }
+ ],
+ "two_bedroom_series": [
+  {
+   "period": "2021-10",
+   "new_tenant": 2014,
+   "sitting_tenant": 1554,
+   "edition": "2022"
+  },
+  {
+   "period": "2022-10",
+   "new_tenant": 2110,
+   "sitting_tenant": 1611,
+   "edition": "2023"
+  },
+  {
+   "period": "2023-10",
+   "new_tenant": 2405,
+   "sitting_tenant": 1868,
+   "edition": "2024"
+  },
+  {
+   "period": "2024-10",
+   "new_tenant": 2612,
+   "sitting_tenant": 1918,
+   "edition": "2025"
+  },
+  {
+   "period": "2025-10",
+   "new_tenant": 2547,
+   "sitting_tenant": 1984,
+   "edition": "2025"
+  }
+ ]
+}

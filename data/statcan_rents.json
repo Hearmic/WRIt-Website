@@ -1,0 +1,382 @@
+{
+ "meta": {
+  "product_id": 46100092,
+  "title": "Asking rent and paid rent prices, by rental unit type and number of bedrooms, experimental estimates",
+  "release_date": "2026-09-09",
+  "zip_url": "https://www150.statcan.gc.ca/n1/tbl/csv/46100092-eng.zip",
+  "start": "2019-01-01",
+  "end": "2026-04-01",
+  "geography": "Toronto, Census metropolitan area (CMA)",
+  "unit_types": [
+   "Apartment - 1 bedroom",
+   "Apartment - 2 bedrooms"
+  ],
+  "from_period": "2019-01"
+ },
+ "series": {
+  "1br": [
+   {
+    "ref_date": "2019-01",
+    "quarter": "2019 Q1",
+    "asking": 1990,
+    "paid": 1330
+   },
+   {
+    "ref_date": "2019-04",
+    "quarter": "2019 Q2",
+    "asking": 1980,
+    "paid": 1340
+   },
+   {
+    "ref_date": "2019-07",
+    "quarter": "2019 Q3",
+    "asking": 1970,
+    "paid": 1360
+   },
+   {
+    "ref_date": "2019-10",
+    "quarter": "2019 Q4",
+    "asking": 1980,
+    "paid": 1370
+   },
+   {
+    "ref_date": "2020-01",
+    "quarter": "2020 Q1",
+    "asking": 2000,
+    "paid": 1390
+   },
+   {
+    "ref_date": "2020-04",
+    "quarter": "2020 Q2",
+    "asking": 1930,
+    "paid": 1380
+   },
+   {
+    "ref_date": "2020-07",
+    "quarter": "2020 Q3",
+    "asking": 1860,
+    "paid": 1390
+   },
+   {
+    "ref_date": "2020-10",
+    "quarter": "2020 Q4",
+    "asking": 1750,
+    "paid": 1370
+   },
+   {
+    "ref_date": "2021-01",
+    "quarter": "2021 Q1",
+    "asking": 1720,
+    "paid": 1370
+   },
+   {
+    "ref_date": "2021-04",
+    "quarter": "2021 Q2",
+    "asking": 1740,
+    "paid": 1380
+   },
+   {
+    "ref_date": "2021-07",
+    "quarter": "2021 Q3",
+    "asking": 1780,
+    "paid": 1390
+   },
+   {
+    "ref_date": "2021-10",
+    "quarter": "2021 Q4",
+    "asking": 1830,
+    "paid": 1400
+   },
+   {
+    "ref_date": "2022-01",
+    "quarter": "2022 Q1",
+    "asking": 1870,
+    "paid": 1420
+   },
+   {
+    "ref_date": "2022-04",
+    "quarter": "2022 Q2",
+    "asking": 1950,
+    "paid": 1460
+   },
+   {
+    "ref_date": "2022-07",
+    "quarter": "2022 Q3",
+    "asking": 2100,
+    "paid": 1490
+   },
+   {
+    "ref_date": "2022-10",
+    "quarter": "2022 Q4",
+    "asking": 2180,
+    "paid": 1510
+   },
+   {
+    "ref_date": "2023-01",
+    "quarter": "2023 Q1",
+    "asking": 2210,
+    "paid": 1520
+   },
+   {
+    "ref_date": "2023-04",
+    "quarter": "2023 Q2",
+    "asking": 2280,
+    "paid": 1540
+   },
+   {
+    "ref_date": "2023-07",
+    "quarter": "2023 Q3",
+    "asking": 2320,
+    "paid": 1580
+   },
+   {
+    "ref_date": "2023-10",
+    "quarter": "2023 Q4",
+    "asking": 2340,
+    "paid": 1640
+   },
+   {
+    "ref_date": "2024-01",
+    "quarter": "2024 Q1",
+    "asking": 2290,
+    "paid": 1700
+   },
+   {
+    "ref_date": "2024-04",
+    "quarter": "2024 Q2",
+    "asking": 2280,
+    "paid": 1730
+   },
+   {
+    "ref_date": "2024-07",
+    "quarter": "2024 Q3",
+    "asking": 2270,
+    "paid": 1740
+   },
+   {
+    "ref_date": "2024-10",
+    "quarter": "2024 Q4",
+    "asking": 2210,
+    "paid": 1740
+   },
+   {
+    "ref_date": "2025-01",
+    "quarter": "2025 Q1",
+    "asking": 2170,
+    "paid": 1750
+   },
+   {
+    "ref_date": "2025-04",
+    "quarter": "2025 Q2",
+    "asking": 2150,
+    "paid": 1750
+   },
+   {
+    "ref_date": "2025-07",
+    "quarter": "2025 Q3",
+    "asking": 2160,
+    "paid": 1780
+   },
+   {
+    "ref_date": "2025-10",
+    "quarter": "2025 Q4",
+    "asking": 2130,
+    "paid": 1800
+   },
+   {
+    "ref_date": "2026-01",
+    "quarter": "2026 Q1",
+    "asking": 2110,
+    "paid": 1840
+   },
+   {
+    "ref_date": "2026-04",
+    "quarter": "2026 Q2",
+    "asking": 2090,
+    "paid": 1840
+   }
+  ],
+  "2br": [
+   {
+    "ref_date": "2019-01",
+    "quarter": "2019 Q1",
+    "asking": 2560,
+    "paid": 1470
+   },
+   {
+    "ref_date": "2019-04",
+    "quarter": "2019 Q2",
+    "asking": 2550,
+    "paid": 1490
+   },
+   {
+    "ref_date": "2019-07",
+    "quarter": "2019 Q3",
+    "asking": 2480,
+    "paid": 1510
+   },
+   {
+    "ref_date": "2019-10",
+    "quarter": "2019 Q4",
+    "asking": 2480,
+    "paid": 1520
+   },
+   {
+    "ref_date": "2020-01",
+    "quarter": "2020 Q1",
+    "asking": 2490,
+    "paid": 1550
+   },
+   {
+    "ref_date": "2020-04",
+    "quarter": "2020 Q2",
+    "asking": 2370,
+    "paid": 1570
+   },
+   {
+    "ref_date": "2020-07",
+    "quarter": "2020 Q3",
+    "asking": 2310,
+    "paid": 1590
+   },
+   {
+    "ref_date": "2020-10",
+    "quarter": "2020 Q4",
+    "asking": 2190,
+    "paid": 1600
+   },
+   {
+    "ref_date": "2021-01",
+    "quarter": "2021 Q1",
+    "asking": 2140,
+    "paid": 1620
+   },
+   {
+    "ref_date": "2021-04",
+    "quarter": "2021 Q2",
+    "asking": 2190,
+    "paid": 1620
+   },
+   {
+    "ref_date": "2021-07",
+    "quarter": "2021 Q3",
+    "asking": 2210,
+    "paid": 1600
+   },
+   {
+    "ref_date": "2021-10",
+    "quarter": "2021 Q4",
+    "asking": 2280,
+    "paid": 1600
+   },
+   {
+    "ref_date": "2022-01",
+    "quarter": "2022 Q1",
+    "asking": 2320,
+    "paid": 1630
+   },
+   {
+    "ref_date": "2022-04",
+    "quarter": "2022 Q2",
+    "asking": 2460,
+    "paid": 1670
+   },
+   {
+    "ref_date": "2022-07",
+    "quarter": "2022 Q3",
+    "asking": 2640,
+    "paid": 1690
+   },
+   {
+    "ref_date": "2022-10",
+    "quarter": "2022 Q4",
+    "asking": 2710,
+    "paid": 1720
+   },
+   {
+    "ref_date": "2023-01",
+    "quarter": "2023 Q1",
+    "asking": 2730,
+    "paid": 1740
+   },
+   {
+    "ref_date": "2023-04",
+    "quarter": "2023 Q2",
+    "asking": 2880,
+    "paid": 1770
+   },
+   {
+    "ref_date": "2023-07",
+    "quarter": "2023 Q3",
+    "asking": 2920,
+    "paid": 1800
+   },
+   {
+    "ref_date": "2023-10",
+    "quarter": "2023 Q4",
+    "asking": 2920,
+    "paid": 1840
+   },
+   {
+    "ref_date": "2024-01",
+    "quarter": "2024 Q1",
+    "asking": 2850,
+    "paid": 1890
+   },
+   {
+    "ref_date": "2024-04",
+    "quarter": "2024 Q2",
+    "asking": 2830,
+    "paid": 1940
+   },
+   {
+    "ref_date": "2024-07",
+    "quarter": "2024 Q3",
+    "asking": 2830,
+    "paid": 1980
+   },
+   {
+    "ref_date": "2024-10",
+    "quarter": "2024 Q4",
+    "asking": 2740,
+    "paid": 2010
+   },
+   {
+    "ref_date": "2025-01",
+    "quarter": "2025 Q1",
+    "asking": 2690,
+    "paid": 2060
+   },
+   {
+    "ref_date": "2025-04",
+    "quarter": "2025 Q2",
+    "asking": 2670,
+    "paid": 2090
+   },
+   {
+    "ref_date": "2025-07",
+    "quarter": "2025 Q3",
+    "asking": 2720,
+    "paid": 2120
+   },
+   {
+    "ref_date": "2025-10",
+    "quarter": "2025 Q4",
+    "asking": 2670,
+    "paid": 2140
+   },
+   {
+    "ref_date": "2026-01",
+    "quarter": "2026 Q1",
+    "asking": 2660,
+    "paid": 2150
+   },
+   {
+    "ref_date": "2026-04",
+    "quarter": "2026 Q2",
+    "asking": 2650,
+    "paid": 2160
+   }
+  ]
+ }
+}

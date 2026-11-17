@@ -1,0 +1,28 @@
+{
+ "meta": {
+  "url": "https://www150.statcan.gc.ca/n1/daily-quotidien/220921/dq220921b-eng.htm",
+  "release_date": "2022-09-21",
+  "geography": "Canada",
+  "note": "No data table with these rates is linked from the release (it links 46-10-0053-01, property ownership, and 34-10-0066-01, building permits), so the rates are read from the release text."
+ },
+ "groups": [
+  {
+   "age": "25 to 29",
+   "rate_2011": 44.1,
+   "rate_2021": 36.5,
+   "quote": "aged 25 to 29 years fell from 44.1% in 2011 to 36.5% in 2021"
+  },
+  {
+   "age": "30 to 34",
+   "rate_2011": 59.2,
+   "rate_2021": 52.3,
+   "quote": "aged 30 to 34 years, homeownership rates fell from 59.2% in 2011 to 52.3% in 2021"
+  },
+  {
+   "age": "70 to 74",
+   "rate_2011": 75.5,
+   "rate_2021": 74.8,
+   "quote": "aged 70 to 74 years, for example, the homeownership rate fell from 75.5% to 74.8%"
+  }
+ ]
+}

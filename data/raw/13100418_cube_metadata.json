@@ -1,0 +1,474 @@
+{
+ "status": "SUCCESS",
+ "object": {
+  "responseStatusCode": 0,
+  "productId": "13100418",
+  "cansimId": "102-4505",
+  "cubeTitleEn": "Crude birth rate, age-specific fertility rates and total fertility rate (live births)",
+  "cubeTitleFr": "Taux brut de natalit\u00e9, taux de f\u00e9condit\u00e9 par groupe d'\u00e2ge et indice synth\u00e9tique de f\u00e9condit\u00e9 (naissances vivantes)",
+  "cubeStartDate": "1991-01-01",
+  "cubeEndDate": "2025-01-01",
+  "frequencyCode": 12,
+  "nbSeriesCube": 135,
+  "nbDatapointsCube": 4473,
+  "releaseTime": "2026-09-23T08:30",
+  "archiveStatusCode": "2",
+  "archiveStatusEn": "CURRENT - a cube available to the public and that is current",
+  "archiveStatusFr": "ACTIF - un cube qui est disponible au public et qui est toujours mise a jour",
+  "subjectCode": [
+   "1702",
+   "130802"
+  ],
+  "surveyCode": [
+   "3231"
+  ],
+  "dimension": [
+   {
+    "dimensionPositionId": 1,
+    "dimensionNameEn": "Geography, place of residence of mother",
+    "dimensionNameFr": "G\u00e9ographie, lieu de r\u00e9sidence de la m\u00e8re",
+    "hasUom": false,
+    "member": [
+     {
+      "memberId": 1,
+      "parentMemberId": null,
+      "memberNameEn": "Canada, place of residence of mother",
+      "memberNameFr": "Canada, lieu de r\u00e9sidence de la m\u00e8re",
+      "classificationCode": "11124",
+      "classificationTypeCode": "1",
+      "geoLevel": 0,
+      "vintage": 2021,
+      "terminated": 0,
+      "memberUomCode": null
+     },
+     {
+      "memberId": 2,
+      "parentMemberId": 1,
+      "memberNameEn": "Newfoundland and Labrador, place of residence of mother",
+      "memberNameFr": "Terre-Neuve-et-Labrador, lieu de r\u00e9sidence de la m\u00e8re",
+      "classificationCode": "10",
+      "classificationTypeCode": "1",
+      "geoLevel": 2,
+      "vintage": 2021,
+      "terminated": 0,
+      "memberUomCode": null
+     },
+     {
+      "memberId": 3,
+      "parentMemberId": 1,
+      "memberNameEn": "Prince Edward Island, place of residence of mother",
+      "memberNameFr": "\u00cele-du-Prince-\u00c9douard, lieu de r\u00e9sidence de la m\u00e8re",
+      "classificationCode": "11",
+      "classificationTypeCode": "1",
+      "geoLevel": 2,
+      "vintage": 2021,
+      "terminated": 0,
+      "memberUomCode": null
+     },
+     {
+      "memberId": 4,
+      "parentMemberId": 1,
+      "memberNameEn": "Nova Scotia, place of residence of mother",
+      "memberNameFr": "Nouvelle-\u00c9cosse, lieu de r\u00e9sidence de la m\u00e8re",
+      "classificationCode": "12",
+      "classificationTypeCode": "1",
+      "geoLevel": 2,
+      "vintage": 2021,
+      "terminated": 0,
+      "memberUomCode": null
+     },
+     {
+      "memberId": 5,
+      "parentMemberId": 1,
+      "memberNameEn": "New Brunswick, place of residence of mother",
+      "memberNameFr": "Nouveau-Brunswick, lieu de r\u00e9sidence de la m\u00e8re",
+      "classificationCode": "13",
+      "classificationTypeCode": "1",
+      "geoLevel": 2,
+      "vintage": 2021,
+      "terminated": 0,
+      "memberUomCode": null
+     },
+     {
+      "memberId": 6,
+      "parentMemberId": 1,
+      "memberNameEn": "Quebec, place of residence of mother",
+      "memberNameFr": "Qu\u00e9bec, lieu de r\u00e9sidence de la m\u00e8re",
+      "classificationCode": "24",
+      "classificationTypeCode": "1",
+      "geoLevel": 2,
+      "vintage": 2021,
+      "terminated": 0,
+      "memberUomCode": null
+     },
+     {
+      "memberId": 7,
+      "parentMemberId": 1,
+      "memberNameEn": "Ontario, place of residence of mother",
+      "memberNameFr": "Ontario, lieu de r\u00e9sidence de la m\u00e8re",
+      "classificationCode": "35",
+      "classificationTypeCode": "1",
+      "geoLevel": 2,
+      "vintage": 2021,
+      "terminated": 0,
+      "memberUomCode": null
+     },
+     {
+      "memberId": 8,
+      "parentMemberId": 1,
+      "memberNameEn": "Manitoba, place of residence of mother",
+      "memberNameFr": "Manitoba, lieu de r\u00e9sidence de la m\u00e8re",
+      "classificationCode": "46",
+      "classificationTypeCode": "1",
+      "geoLevel": 2,
+      "vintage": 2021,
+      "terminated": 0,
+      "memberUomCode": null
+     },
+     {
+      "memberId": 9,
+      "parentMemberId": 1,
+      "memberNameEn": "Saskatchewan, place of residence of mother",
+      "memberNameFr": "Saskatchewan, lieu de r\u00e9sidence de la m\u00e8re",
+      "classificationCode": "47",
+      "classificationTypeCode": "1",
+      "geoLevel": 2,
+      "vintage": 2021,
+      "terminated": 0,
+      "memberUomCode": null
+     },
+     {
+      "memberId": 10,
+      "parentMemberId": 1,
+      "memberNameEn": "Alberta, place of residence of mother",
+      "memberNameFr": "Alberta, lieu de r\u00e9sidence de la m\u00e8re",
+      "classificationCode": "48",
+      "classificationTypeCode": "1",
+      "geoLevel": 2,
+      "vintage": 2021,
+      "terminated": 0,
+      "memberUomCode": null
+     },
+     {
+      "memberId": 11,
+      "parentMemberId": 1,
+      "memberNameEn": "British Columbia, place of residence of mother",
+      "memberNameFr": "Colombie-Britannique, lieu de r\u00e9sidence de la m\u00e8re",
+      "classificationCode": "59",
+      "classificationTypeCode": "1",
+      "geoLevel": 2,
+      "vintage": 2021,
+      "terminated": 0,
+      "memberUomCode": null
+     },
+     {
+      "memberId": 12,
+      "parentMemberId": 1,
+      "memberNameEn": "Yukon, place of residence of mother",
+      "memberNameFr": "Yukon, lieu de r\u00e9sidence de la m\u00e8re",
+      "classificationCode": "60",
+      "classificationTypeCode": "1",
+      "geoLevel": 2,
+      "vintage": 2021,
+      "terminated": 0,
+      "memberUomCode": null
+     },
+     {
+      "memberId": 13,
+      "parentMemberId": 1,
+      "memberNameEn": "Northwest Territories including Nunavut, place of residence of mother",
+      "memberNameFr": "Territoires du Nord-Ouest incluant Nunavut, lieu de r\u00e9sidence de la m\u00e8re",
+      "classificationCode": null,
+      "classificationTypeCode": null,
+      "geoLevel": null,
+      "vintage": null,
+      "terminated": 1,
+      "memberUomCode": null
+     },
+     {
+      "memberId": 14,
+      "parentMemberId": 1,
+      "memberNameEn": "Northwest Territories, place of residence of mother",
+      "memberNameFr": "Territoires du Nord-Ouest, lieu de r\u00e9sidence de la m\u00e8re",
+      "classificationCode": "61",
+      "classificationTypeCode": "1",
+      "geoLevel": 2,
+      "vintage": 2021,
+      "terminated": 0,
+      "memberUomCode": null
+     },
+     {
+      "memberId": 15,
+      "parentMemberId": 1,
+      "memberNameEn": "Nunavut, place of residence of mother",
+      "memberNameFr": "Nunavut, lieu de r\u00e9sidence de la m\u00e8re",
+      "classificationCode": "62",
+      "classificationTypeCode": "1",
+      "geoLevel": 2,
+      "vintage": 2021,
+      "terminated": 0,
+      "memberUomCode": null
+     }
+    ]
+   },
+   {
+    "dimensionPositionId": 2,
+    "dimensionNameEn": "Characteristics",
+    "dimensionNameFr": "Caract\u00e9ristiques",
+    "hasUom": true,
+    "member": [
+     {
+      "memberId": 1,
+      "parentMemberId": null,
+      "memberNameEn": "Age-specific fertility rate, females 15 to 19 years",
+      "memberNameFr": "Taux de f\u00e9condit\u00e9 par groupe d'\u00e2ge, femmes de 15 \u00e0 19 ans",
+      "classificationCode": null,
+      "classificationTypeCode": null,
+      "geoLevel": null,
+      "vintage": null,
+      "terminated": 0,
+      "memberUomCode": 257
+     },
+     {
+      "memberId": 2,
+      "parentMemberId": null,
+      "memberNameEn": "Age-specific fertility rate, females 20 to 24 years",
+      "memberNameFr": "Taux de f\u00e9condit\u00e9 par groupe d'\u00e2ge, femmes de 20 \u00e0 24 ans",
+      "classificationCode": null,
+      "classificationTypeCode": null,
+      "geoLevel": null,
+      "vintage": null,
+      "terminated": 0,
+      "memberUomCode": 257
+     },
+     {
+      "memberId": 3,
+      "parentMemberId": null,
+      "memberNameEn": "Age-specific fertility rate, females 25 to 29 years",
+      "memberNameFr": "Taux de f\u00e9condit\u00e9 par groupe d'\u00e2ge, femmes de 25 \u00e0 29 ans",
+      "classificationCode": null,
+      "classificationTypeCode": null,
+      "geoLevel": null,
+      "vintage": null,
+      "terminated": 0,
+      "memberUomCode": 257
+     },
+     {
+      "memberId": 4,
+      "parentMemberId": null,
+      "memberNameEn": "Age-specific fertility rate, females 30 to 34 years",
+      "memberNameFr": "Taux de f\u00e9condit\u00e9 par groupe d'\u00e2ge, femmes de 30 \u00e0 34 ans",
+      "classificationCode": null,
+      "classificationTypeCode": null,
+      "geoLevel": null,
+      "vintage": null,
+      "terminated": 0,
+      "memberUomCode": 257
+     },
+     {
+      "memberId": 5,
+      "parentMemberId": null,
+      "memberNameEn": "Age-specific fertility rate, females 35 to 39 years",
+      "memberNameFr": "Taux de f\u00e9condit\u00e9 par groupe d'\u00e2ge, femmes de 35 \u00e0 39 ans",
+      "classificationCode": null,
+      "classificationTypeCode": null,
+      "geoLevel": null,
+      "vintage": null,
+      "terminated": 0,
+      "memberUomCode": 257
+     },
+     {
+      "memberId": 6,
+      "parentMemberId": null,
+      "memberNameEn": "Age-specific fertility rate, females 40 to 44 years",
+      "memberNameFr": "Taux de f\u00e9condit\u00e9 par groupe d'\u00e2ge, femmes de 40 \u00e0 44 ans",
+      "classificationCode": null,
+      "classificationTypeCode": null,
+      "geoLevel": null,
+      "vintage": null,
+      "terminated": 0,
+      "memberUomCode": 257
+     },
+     {
+      "memberId": 7,
+      "parentMemberId": null,
+      "memberNameEn": "Age-specific fertility rate, females 45 to 49 years",
+      "memberNameFr": "Taux de f\u00e9condit\u00e9 par groupe d'\u00e2ge, femmes de 45 \u00e0 49 ans",
+      "classificationCode": null,
+      "classificationTypeCode": null,
+      "geoLevel": null,
+      "vintage": null,
+      "terminated": 0,
+      "memberUomCode": 257
+     },
+     {
+      "memberId": 8,
+      "parentMemberId": null,
+      "memberNameEn": "Crude birth rate, live births per 1,000 population",
+      "memberNameFr": "Taux brut de natalit\u00e9, naissances vivantes pour 1 000 personnes",
+      "classificationCode": null,
+      "classificationTypeCode": null,
+      "geoLevel": null,
+      "vintage": null,
+      "terminated": 0,
+      "memberUomCode": 257
+     },
+     {
+      "memberId": 9,
+      "parentMemberId": null,
+      "memberNameEn": "Total fertility rate per female",
+      "memberNameFr": "Indice synth\u00e9tique de f\u00e9condit\u00e9 par femme",
+      "classificationCode": null,
+      "classificationTypeCode": null,
+      "geoLevel": null,
+      "vintage": null,
+      "terminated": 0,
+      "memberUomCode": 257
+     }
+    ]
+   }
+  ],
+  "footnote": [
+   {
+    "footnoteId": 1,
+    "footnotesEn": "Sources: Statistics Canada, Canadian Vital Statistics, Birth Database (CVSB) and Centre for Demography (Demographic Estimates Program).",
+    "footnotesFr": "Sources : Statistique Canada, Statistique de l'\u00e9tat civil du Canada, Base canadienne de donn\u00e9es de l'\u00e9tat civil sur les naissances (BCDECN) et Centre de d\u00e9mographie (Programme des estimations d\u00e9mographiques).",
+    "link": {
+     "footnoteId": 1,
+     "dimensionPositionId": 0,
+     "memberId": 0
+    }
+   },
+   {
+    "footnoteId": 2,
+    "footnotesEn": "Live birth is the complete expulsion or extraction from its mother of a product of conception, irrespective of the duration of the pregnancy, which, after such separation, breathes or shows any other evidence of life, such as beating of the heart, pulsation of the umbilical cord, or definite movement of voluntary muscles, whether or not the umbilical cord has been cut or the placenta is attached.",
+    "footnotesFr": "Naissance vivante correspond \u00e0 l'expulsion ou extraction compl\u00e8te du corps de la m\u00e8re, ind\u00e9pendamment de la dur\u00e9e de la gestation, d'un produit de conception qui, apr\u00e8s cette s\u00e9paration, respire ou manifeste tout autre signe de vie, tel que battement du coeur, pulsation du cordon ombilical ou contraction effective d'un muscle soumis \u00e0 l'action de la volont\u00e9, que le cordon ombilical ait \u00e9t\u00e9 coup\u00e9 ou non, et que le placenta soit ou non demeur\u00e9 attach\u00e9.",
+    "link": {
+     "footnoteId": 2,
+     "dimensionPositionId": 0,
+     "memberId": 0
+    }
+   },
+   {
+    "footnoteId": 22,
+    "footnotesEn": "During the production of each year's birth/death/stillbirth statistics, data from previous years may be revised to reflect any updates or changes that have been received from the provincial and territorial vital statistics registrars.",
+    "footnotesFr": "Chaque ann\u00e9e, au cours de la production des statistiques sur les naissances/d\u00e9c\u00e8s/mortinaissances, les donn\u00e9es des ann\u00e9es pr\u00e9c\u00e9dentes pourraient \u00eatre r\u00e9vis\u00e9es en fonction des mises \u00e0 jour ou changements qui ont \u00e9t\u00e9 re\u00e7us des bureaux de l'\u00e9tat civil provinciaux et territoriaux.",
+    "link": {
+     "footnoteId": 22,
+     "dimensionPositionId": 0,
+     "memberId": 0
+    }
+   },
+   {
+    "footnoteId": 27,
+    "footnotesEn": "Where necessary, the births totals from the Canadian Vital Statistics, Birth Database (CVSB) have been adjusted using estimates from the Demographic Estimates Program (DEP) to account for incomplete data in the CVSB.",
+    "footnotesFr": "Au besoin, les totaux des naissances tir\u00e9s de la Base canadienne de donn\u00e9es de l'\u00e9tat civil sur les naissances (BCDECN) ont \u00e9t\u00e9 ajust\u00e9s \u00e0 l'aide des estimations du Programme des estimations d\u00e9mographiques (DEP) afin de tenir compte des donn\u00e9es incompl\u00e8tes dans la BCDECN.",
+    "link": {
+     "footnoteId": 27,
+     "dimensionPositionId": 0,
+     "memberId": 0
+    }
+   },
+   {
+    "footnoteId": 9,
+    "footnotesEn": "Rates for Canada include live births to mothers who are residents of Canada, with unknown province or territory of residence. Births for which the province of residence is unknown, and not imputed with the place of occurrence, were prorated using the observed distribution.",
+    "footnotesFr": "Les taux pour le Canada comprennent les naissances vivantes des m\u00e8res r\u00e9sidentes du Canada, dont la province ou le territoire de r\u00e9sidence est inconnu. Les naissances pour lesquelles la province de r\u00e9sidence est inconnue, et non imput\u00e9e avec le lieu d'occurrence, ont \u00e9t\u00e9 r\u00e9parties selon la distribution observ\u00e9e.",
+    "link": {
+     "footnoteId": 9,
+     "dimensionPositionId": 1,
+     "memberId": 1
+    }
+   },
+   {
+    "footnoteId": 18,
+    "footnotesEn": "Nunavut came into being officially as a Territory of Canada on April 1, 1999. Data for Nunavut and Northwest Territories are presented separately starting in the year 1999.",
+    "footnotesFr": "Le Nunavut est devenu officiellement un territoire canadien le 1er avril 1999. Les donn\u00e9es pour le Nunavut et les Territoires du Nord-Ouest sont pr\u00e9sent\u00e9es s\u00e9par\u00e9ment \u00e0 partir de 1999.",
+    "link": {
+     "footnoteId": 18,
+     "dimensionPositionId": 1,
+     "memberId": 13
+    }
+   },
+   {
+    "footnoteId": 10,
+    "footnotesEn": "Northwest Territories excluding Nunavut.",
+    "footnotesFr": "Territoires du Nord-Ouest excluant Nunavut.",
+    "link": {
+     "footnoteId": 10,
+     "dimensionPositionId": 1,
+     "memberId": 14
+    }
+   },
+   {
+    "footnoteId": 8,
+    "footnotesEn": "The geographic distribution of live births in this table is based on the mother's usual place of residence.",
+    "footnotesFr": "La r\u00e9partition g\u00e9ographique des naissances vivantes dans ce tableau se fonde sur le lieu de r\u00e9sidence habituel de la m\u00e8re.",
+    "link": {
+     "footnoteId": 8,
+     "dimensionPositionId": 1,
+     "memberId": 0
+    }
+   },
+   {
+    "footnoteId": 7,
+    "footnotesEn": "Total fertility rate is an estimate of the average number of live births a female can be expected to have in her lifetime, based on the age-specific fertility rates (ASFR) of a given year. The total fertility rate (TFR) = (SUM of single year of age-specific fertility rates) / 1,000.",
+    "footnotesFr": "L'indice synth\u00e9tique de f\u00e9condit\u00e9 est une estimation du nombre moyen de naissances vivantes qu'une femme peut s'attendre \u00e0 avoir au cours de sa vie, selon les taux de f\u00e9condit\u00e9 par \u00e2ge (TFA) d'une ann\u00e9e donn\u00e9e. L'indice synth\u00e9tique de f\u00e9condit\u00e9 (ISF) = (la somme des taux de f\u00e9condit\u00e9 par ann\u00e9e d'\u00e2ge) / 1 000.",
+    "link": {
+     "footnoteId": 7,
+     "dimensionPositionId": 2,
+     "memberId": 9
+    }
+   },
+   {
+    "footnoteId": 3,
+    "footnotesEn": "Age of mother attained at the last birthday preceding delivery.",
+    "footnotesFr": "\u00c2ge de la m\u00e8re au dernier anniversaire pr\u00e9c\u00e9dant l'accouchement.",
+    "link": {
+     "footnoteId": 3,
+     "dimensionPositionId": 2,
+     "memberId": 0
+    }
+   },
+   {
+    "footnoteId": 4,
+    "footnotesEn": "Age-specific fertility rate (ASFR) is the number of live births per 1,000 females in a specific age group. Five-year age groups were used in these tabulations (ranging from 15 to 19 years to 45 to 49 years).",
+    "footnotesFr": "Taux de f\u00e9condit\u00e9 par \u00e2ge (TFA) est le nombre de naissances vivantes pour 1 000 femmes dans un intervalle d'\u00e2ge donn\u00e9. On s'est servi de groupes d'\u00e2ge de cinq ans (allant de 15 \u00e0 19 ans \u00e0 45 \u00e0 49 ans) pour les totalisations.",
+    "link": {
+     "footnoteId": 4,
+     "dimensionPositionId": 2,
+     "memberId": 0
+    }
+   },
+   {
+    "footnoteId": 11,
+    "footnotesEn": "The following standard symbols are used in this Statistics Canada table: (..) for figures not available for a specific reference period, (...) for figures not applicable and (x) for figures suppressed to meet the confidentiality requirements of the Statistics Act.",
+    "footnotesFr": "Les signes conventionnels suivants sont employ\u00e9s dans ce tableau de Statistique Canada : (..) nombres indisponibles pour une p\u00e9riode de r\u00e9f\u00e9rence pr\u00e9cise, (...) nombres n'ayant pas lieu de figurer et (x) nombres confidentiels en vertu des dispositions de la Loi sur la statistique.",
+    "link": {
+     "footnoteId": 11,
+     "dimensionPositionId": 2,
+     "memberId": 0
+    }
+   },
+   {
+    "footnoteId": 12,
+    "footnotesEn": "The population estimates used are the most recent available at time of dissemination, adjusted for census net undercoverage (CNU) and incompletely enumerated reserves and settlements (IERS).",
+    "footnotesFr": "Les estimations de population utilis\u00e9es sont les plus r\u00e9centes au moment de la diffusion, ajust\u00e9s pour tenir compte du sous-d\u00e9nombrement net du recensement (SDNR) et des r\u00e9serves et \u00e9tablissements partiellement d\u00e9nombr\u00e9s (REPD).",
+    "link": {
+     "footnoteId": 12,
+     "dimensionPositionId": 2,
+     "memberId": 0
+    }
+   }
+  ],
+  "correctionFootnote": [],
+  "correction": [
+   {
+    "correctionId": "1080",
+    "correctionDate": "2018-11-06",
+    "correctionNoteEn": "<p>Since the data has been revised, the following note no longer applies as of September 29, 2021.<br><br>The 2017 data for this table were corrected on November 7, 2018. Originally, the rates for the Northwest Territories and Nunavut were calculated using the 2016 population estimates, and not those for 2017. Furthermore, as the 2017 birth data for Yukon were not available for this release, the population estimates used to calculate rates at the Canada level should also have excluded Yukon, but did not. These corrections affected four of the nine rates originally presented at the Canada level, six of the nine rates presented for the Northwest Territories, and eight of the nine rates presented for Nunavut.<br><br></p>",
+    "correctionNoteFr": "<p>Les donn\u00e9es ayant \u00e9t\u00e9 r\u00e9vis\u00e9es, la note suivante ne s\u2019applique plus \u00e0 compter du 29 septembre 2021.<br><br>Le 7 novembre 2018, des corrections ont \u00e9t\u00e9 apport\u00e9es \u00e0 ce tableau pour les donn\u00e9es de 2017. Auparavant, les taux pour les Territoires du Nord-Ouest et le Nunavut avaient \u00e9t\u00e9 calcul\u00e9s \u00e0 partir des estimations de population de l\u2019ann\u00e9e 2016, au lieu de celle de 2017. De plus, les donn\u00e9es sur les naissances de 2017 pour le Yukon n\u2019\u00e9taient pas disponibles pour cette diffusion. Cons\u00e9quemment, les estimations de population utilis\u00e9es dans le calcul des taux au niveau Canada auraient d\u00fb les exclure. Ces corrections affectent quatre des neuf taux pr\u00e9sent\u00e9s au niveau Canada, six des neuf taux pr\u00e9sent\u00e9s pour les Territoires du Nord-Ouest, et huit des neuf taux pr\u00e9sent\u00e9s pour le Nunavut.<br><br></p>"
+   }
+  ],
+  "issueDate": "2018-06-27"
+ }
+}

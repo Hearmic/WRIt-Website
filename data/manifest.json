@@ -1,0 +1,220 @@
+{
+ "A": {
+  "retrieved": "2026-11-14",
+  "processed_sha256": "b615eb28d0d9f2bcc327968f34e4bf7aea68c43714d44a25e0a61ab735e2c448",
+  "raw_files": [
+   "46100092-eng.zip",
+   "46100092_cube_metadata.json"
+  ],
+  "processed_files": [
+   "statcan_rents.csv",
+   "statcan_rents.json"
+  ],
+  "info": {
+   "product_id": 46100092,
+   "title": "Asking rent and paid rent prices, by rental unit type and number of bedrooms, experimental estimates",
+   "release_date": "2026-09-09",
+   "zip_url": "https://www150.statcan.gc.ca/n1/tbl/csv/46100092-eng.zip",
+   "start": "2019-01-01",
+   "end": "2026-04-01",
+   "geography": "Toronto, Census metropolitan area (CMA)",
+   "unit_types": [
+    "Apartment - 1 bedroom",
+    "Apartment - 2 bedrooms"
+   ],
+   "from_period": "2019-01"
+  }
+ },
+ "B": {
+  "retrieved": "2026-11-14",
+  "processed_sha256": "00502bd7f97fc7f82e3ee27c63fbd5a062175867db2eefba1d73311c8b231d29",
+  "raw_files": [
+   "cmhc_editions.json",
+   "rmr-canada-2022-en.xlsx",
+   "rmr-canada-2023-en.xlsx",
+   "rmr-canada-2024-en.xlsx",
+   "rmr-canada-2025-en.xlsx"
+  ],
+  "processed_files": [
+   "cmhc_turnover.csv",
+   "cmhc_turnover.json"
+  ],
+  "info": {
+   "edition": "2025",
+   "release_date": "December 11, 2025",
+   "period": "2025-10",
+   "workbook_url": "https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-canada-2025-en.xlsx?rev=11bbba5e-64a5-4dcd-a81f-7252c2b12537",
+   "sheet": "Table 6.0",
+   "table_title": "6.0 Average Rent for Turnover and Non-turnover Units  Privately Initiated Apartment Structures of Three Units and Over - Provinces and Major Centres",
+   "geography": "Toronto CMA",
+   "universe": "Privately initiated apartment structures of three units and over",
+   "editions_used": [
+    {
+     "edition": "2025",
+     "published": "December 11, 2025",
+     "url": "https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-canada-2025-en.xlsx?rev=11bbba5e-64a5-4dcd-a81f-7252c2b12537",
+     "sheet": "Table 6.0",
+     "table_title": "6.0 Average Rent for Turnover and Non-turnover Units  Privately Initiated Apartment Structures of Three Units and Over - Provinces and Major Centres"
+    },
+    {
+     "edition": "2024",
+     "published": "December 17, 2024",
+     "url": "https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2024/rmr-canada-2024-en.xlsx?rev=7dcf3c22-1bec-47b5-a8f6-90d3d7a0cfea",
+     "sheet": "Table 6.0",
+     "table_title": "6.0 Average Rent and Average Change in Rent for Turnover and Non-turnover Units, Two Bedrooms Only   Privately Initiated Apartment Structures of Three Units and Over - Provinces and Major Centres"
+    },
+    {
+     "edition": "2023",
+     "published": "January 31, 2024",
+     "url": "https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2023/rmr-canada-2023-en.xlsx?rev=1a17baec-1321-4187-942b-847eef396682",
+     "sheet": "Table 6.0",
+     "table_title": "6.0 Average Rent and Average Change in Rent for Turnover and Non-turnover Units, Two Bedrooms Only   Privately Initiated Apartment Structures of Three Units and Over - Provinces and Major Centres"
+    },
+    {
+     "edition": "2022",
+     "published": "January 26, 2023",
+     "url": "https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2022/rmr-canada-2022-en.xlsx?rev=f63f0463-58c5-4174-b14d-7acef593127d",
+     "sheet": "Table 6.0",
+     "table_title": "6.0 Average Rent and Average Change in Rent for Turnover and Non-turnover Units, Two Bedrooms Only   Privately Initiated Apartment Structures of Three Units and Over - Provinces and Major Centres"
+    }
+   ],
+   "editions_without_table": [
+    "2021",
+    "2020",
+    "2019"
+   ],
+   "quality_codes": "a Excellent, b Very good, c Good, d Poor (use with caution)"
+  }
+ },
+ "C": {
+  "retrieved": "2026-11-14",
+  "processed_sha256": "6d445b93322b19f130747fd7c5f99589e83be3d5ab9edc0681f3bfe69555d4a6",
+  "raw_files": [
+   "dq220921b-eng.htm"
+  ],
+  "processed_files": [
+   "homeownership.json"
+  ],
+  "info": {
+   "url": "https://www150.statcan.gc.ca/n1/daily-quotidien/220921/dq220921b-eng.htm",
+   "release_date": "2022-09-21",
+   "geography": "Canada",
+   "note": "No data table with these rates is linked from the release (it links 46-10-0053-01, property ownership, and 34-10-0066-01, building permits), so the rates are read from the release text."
+  }
+ },
+ "D": {
+  "retrieved": "2026-11-14",
+  "processed_sha256": "1c1c759628647d90a41b4c94aa7b4e8af5132d31b2fa2f10b65ce9853c8f3106",
+  "raw_files": [
+   "13100418-eng.zip",
+   "13100418_cube_metadata.json"
+  ],
+  "processed_files": [
+   "fertility.csv",
+   "fertility.json"
+  ],
+  "info": {
+   "product_id": 13100418,
+   "title": "Crude birth rate, age-specific fertility rates and total fertility rate (live births)",
+   "release_date": "2026-09-23",
+   "zip_url": "https://www150.statcan.gc.ca/n1/tbl/csv/13100418-eng.zip",
+   "start": "1991-01-01",
+   "end": "2025-01-01",
+   "geography": "Ontario, place of residence of mother",
+   "from_year": 2021,
+   "to_year": 2025,
+   "units": "TFR: children per female; age-specific rate: live births per 1,000 females aged 20 to 24"
+  }
+ },
+ "F": {
+  "retrieved": "2026-11-14",
+  "processed_sha256": "8f24885723574b7471aea1c4ed1dec9bd1ae39c8da5462b9da2f9286a73cf7fd",
+  "raw_files": [
+   "daily_shelter_occupancy_latest_day.json",
+   "daily_shelter_occupancy_package.json",
+   "toronto_shelter_system_flow_pages.json"
+  ],
+  "processed_files": [
+   "shelter_flow.csv",
+   "shelter_flow.json",
+   "shelter_occupancy.json"
+  ],
+  "info": {
+   "flow_resource_id": "fb32967d-ee16-4d46-a880-0614c18f2137",
+   "flow_latest_month": "2026-09",
+   "flow_last_refreshed": "2026-10-15 20:04:37.617705",
+   "occupancy_resource_id": "42714176-4f05-44e6-b157-2b57f29b856a",
+   "occupancy_date": "2026-11-13",
+   "occupancy_last_refreshed": "2026-11-14 14:23:03.029636"
+  }
+ },
+ "E": {
+  "retrieved": "2026-11-14",
+  "processed_sha256": "9767be50d3952cc7575d5cd37bb61a11b5e1093c43ddbaca3e85f895764091af",
+  "raw_files": [
+   "ltb_efile/26 1 2017-01-01_2017-03-31 LTB Applications Received by e-File - 2016-2017.xlsx",
+   "ltb_efile/26 10 2019-07-01_2019-09-30 LTB Applications Received by e-File - Q2 2019-20.xlsx",
+   "ltb_efile/26 11 2019-10-01_2019-12-31 LTB Applications Received by e-File - Q3 2019-20.xlsx",
+   "ltb_efile/26 12 2020-01-01_2020-03-31 LTB Applications Received by e-File - Q4 2019-20.xlsx",
+   "ltb_efile/26 13 2020-04-01_2020-06-30 LTB Applications Received by e-File - Q1 2020-21.xlsx",
+   "ltb_efile/26 14 2020-07-01_2020-09-30 LTB Applications Received by e-File - Q2 2020-21.xlsx",
+   "ltb_efile/26 15 2020-10-01_2020-12-31 LTB Applications Received by e-File - Q3 2020-21.xlsx",
+   "ltb_efile/26 16 2021-01-01_2021-03-31 LTB Applications Received by e-File - Q4 2020-21.xlsx",
+   "ltb_efile/26 17 2021-04-01_2021-06-30 LTB Applications Received by e-File - Q1 2021-22.xlsx",
+   "ltb_efile/26 19 2021-10-01_2021-12-31 LTB Applications Received by e-File - Q3 2021-22.xlsx",
+   "ltb_efile/26 2 2017-04-01_2017-06-30 LTB Applications Received by e-File - Q1 2017-18.xlsx",
+   "ltb_efile/26 20 2022-01-01_2022-03-31 LTB Applications Received by e-File - Q4 2021-22.xlsx",
+   "ltb_efile/26 21 2022-04-01_2022-06-30 LTB Applications Received by e-File - Q1 2022-23.xlsx",
+   "ltb_efile/26 22 2022-07-01_2022-09-30 LTB Applications Received by e-File - Q2 2022-23.xlsx",
+   "ltb_efile/26 23 2022-10-01_2022-12-31 LTB Applications Received by e-File - Q3 2022-23.xlsx",
+   "ltb_efile/26 24 2023-01-01_2023-03-31 LTB Applications Received by e-File - Q4 2022-23.xlsx",
+   "ltb_efile/26 25 2023-04-01_2023-06-30 LTB Applications Received by e-File - Q1 2023-24.xlsx",
+   "ltb_efile/26 26 2023-07-01_2023-09-30 LTB Applications Received by e-File - Q2 2023-24.xlsx",
+   "ltb_efile/26 27 2023-10-01_2023-12-31 LTB Applications Received by e-File - Q3 2023-24.xlsx",
+   "ltb_efile/26 28 2024-01-01_2024-03-31 LTB Applications Received by e-File - Q4 2023-24.xlsx",
+   "ltb_efile/26 29 2024-04-01_2024-06-30 LTB Applications Received by e-File - Q1 2024-25.xlsx",
+   "ltb_efile/26 3 2017-07-01_2017-09-30 LTB Applications Received by e-File - Q2 2017-18.xlsx",
+   "ltb_efile/26 30 2024-07-01_2024-09-30 LTB Applications Received by e-File - Q2 2024-25.xlsx",
+   "ltb_efile/26 31 2024-10-01_2024-12-31 LTB Applications Received by e-File - Q3 2024-25.xlsx",
+   "ltb_efile/26 32 2025-01-01_2025-03-31 LTB Applications Received by e-File - Q4 2024-25.xlsx",
+   "ltb_efile/26 33 2025-04-01_2025-06-30 LTB Applications Received by e-File - Q1 2025-26.xlsx",
+   "ltb_efile/26 34 2025-07-01_2025-09-30 LTB Applications Received by e-File - Q2 2025-26.xlsx",
+   "ltb_efile/26 35 2025-10-01_2025-12-31 LTB Applications Received by e-File - Q3 2025-26.xlsx",
+   "ltb_efile/26 36 2026-01-01_2026-03-31 LTB Applications Received by e-File - Q4 2025-26.xlsx",
+   "ltb_efile/26 37 2026-04-01_2026-06-30 LTB Applications Received by e-File - Q1 2026-27.xlsx",
+   "ltb_efile/26 4 2017-10-01_2017-12-31 LTB Applications Received by e-File - Q3 2017-18.xlsx",
+   "ltb_efile/26 5 2018-01-01_2018-03-31 LTB Applications Received by e-File - Q4 2017-18.xlsx",
+   "ltb_efile/26 6 2018-07-01_2018-09-30 LTB Applications Received by e-File - Q2 2018-19.xlsx",
+   "ltb_efile/26 7 2018-10-01_2018-12-31 LTB Applications Received by e-File - Q3 2018-19.xlsx",
+   "ltb_efile/26 8 2019-01-01_2019-03-31 LTB Applications Received by e-File - Q4 2018-19.xlsx",
+   "ltb_efile/26 9 2019-04-01_2019-06-30 LTB Applications Received by e-File - Q1 2019-20.xlsx",
+   "tribunals_open_data.htm"
+  ],
+  "processed_files": [
+   "ltb_applications.csv",
+   "ltb_applications.json"
+  ],
+  "info": {
+   "page": "https://tribunalsontario.ca/en/about/open-data/",
+   "dataset": "LTB – Applications Received by e-File",
+   "geography": "Ontario (province-wide; no regional split in this dataset)",
+   "granularity": "quarterly (Ontario government fiscal quarters, April–March year)",
+   "measure": "total applications received, all filing methods (column 'total apps received - all filing methods')",
+   "first_quarter": "2017-04-01",
+   "latest_quarter_end": "2026-06-30",
+   "latest_fiscal_label": "Q1 2026-27",
+   "skipped_files": [
+    {
+     "label": "Q4 2016-2017",
+     "file": "26 1 2017-01-01_2017-03-31 LTB Applications Received by e-File - 2016-2017.xlsx",
+     "reason": "multi-quarter or unrecognised layout; kept in raw only"
+    }
+   ],
+   "bill60_effective": "2026-09-21",
+   "notes": [
+    "'Other' application types are only reported from Jan–Mar 2022 onward, so a total of all rows is not comparable over time. L1 is reported in every quarter.",
+    "Numbers are subject to change (Tribunals Ontario note in every file)."
+   ]
+  }
+ }
+}

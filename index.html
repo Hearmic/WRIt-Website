@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rent Reset — Same apartment. More rent.</title>
+<meta name="description" content="In Toronto, a new tenant pays hundreds more than a sitting tenant for the same type of apartment. Here's why, and what Ontario can do about it.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f6f2ea; --ink:#1b1a17; --muted:#6b665c; --rule:#d9d2c3;
+    --new:#c8452c; --sit:#4f6d7a; --card:#fffdf8; --hi:#f1e3c6;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "IBM Plex Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:var(--new)}
+  .wrap{max-width:860px;margin:0 auto;padding:0 22px}
+  nav{position:sticky;top:0;z-index:5;background:rgba(246,242,234,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--rule)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:54px}
+  .logo{font-family:"Instrument Serif",serif;font-size:24px;text-decoration:none;color:var(--ink)}
+  .logo span{color:var(--new)}
+  nav a.cta{font-size:14px;font-weight:600;text-decoration:none;background:var(--ink);color:var(--paper);padding:8px 14px;border-radius:999px}
+  header{padding:72px 0 40px}
+  .kicker{font:500 12px/1 "IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  h1{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(44px,8vw,84px);line-height:1;margin:18px 0 22px;letter-spacing:-.01em}
+  h1 em{color:var(--new);font-style:italic}
+  .lede{font-size:20px;max-width:640px;color:#33302a}
+  .compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:36px 0 10px}
+  .stat{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:20px}
+  .stat .who{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+  .stat .num{font-family:"Instrument Serif",serif;font-size:clamp(40px,7vw,60px);line-height:1.05;margin-top:6px}
+  .stat.new .who,.stat.new .num{color:var(--new)}
+  .stat.sit .who,.stat.sit .num{color:var(--sit)}
+  .stat small{color:var(--muted);font-size:13px}
+  .src{font-size:12.5px;color:var(--muted)}
+  .src a{color:var(--muted)}
+  section{padding:56px 0;border-top:1px solid var(--rule)}
+  h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(32px,5vw,46px);line-height:1.08;margin:10px 0 18px}
+  h3{font-size:17px;margin:0 0 6px}
+  p{margin:0 0 14px;max-width:680px}
+  .chart{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:18px 18px 10px;margin:22px 0 8px}
+  .chart .ttl{font-weight:600;font-size:15px;margin-bottom:2px}
+  .chart .sub{font-size:13px;color:var(--muted);margin-bottom:10px}
+  .canvas-box{position:relative;height:320px}
+  .legend{display:flex;gap:18px;font-size:13px;margin:4px 0 8px;flex-wrap:wrap}
+  .legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+  .calc{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 6px}
+  .calc button{font:inherit;font-size:14px;border:1px solid var(--rule);background:var(--card);padding:8px 14px;border-radius:999px;cursor:pointer;color:var(--ink)}
+  .calc button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .calc-out{font-size:19px;margin-top:8px}
+  .calc-out b{color:var(--new);font-weight:600}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+  .card{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:18px}
+  .card .n{font:500 12px "IBM Plex Mono",monospace;color:var(--new);margin-bottom:8px}
+  .card p{font-size:15.5px;margin:0}
+  .callout{background:var(--hi);border-radius:14px;padding:20px 22px;margin:22px 0}
+  .callout p{margin:0}
+  .big{font-family:"Instrument Serif",serif;font-size:clamp(34px,5vw,48px);line-height:1}
+  .timeline{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0}
+  .timeline .card .big{color:var(--sit)}
+  .timeline .card.after .big{color:var(--new)}
+  .ask{counter-reset:a;list-style:none;padding:0;margin:22px 0}
+  .ask li{counter-increment:a;position:relative;padding:16px 18px 16px 62px;background:var(--card);border:1px solid var(--rule);border-radius:14px;margin-bottom:10px}
+  .ask li::before{content:counter(a);position:absolute;left:18px;top:14px;font-family:"Instrument Serif",serif;font-size:34px;line-height:1;color:var(--new)}
+  .letter{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:22px;white-space:pre-wrap;font-size:15.5px;line-height:1.65}
+  .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+  .btn{font:600 15px "IBM Plex Sans",sans-serif;border:0;border-radius:999px;padding:12px 20px;cursor:pointer;text-decoration:none;display:inline-block}
+  .btn.dark{background:var(--ink);color:var(--paper)}
+  .btn.line{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+  .sources{font-size:14px;padding-left:22px}
+  .sources li{margin-bottom:8px}
+  footer{padding:36px 0 60px;border-top:1px solid var(--rule);font-size:14px;color:var(--muted)}
+  .chart .err{font-size:14px;color:var(--new);padding:40px 0;text-align:center}
+  .card.pending{border-style:dashed}
+  .card.pending .big{color:var(--muted)}
+  .live{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:22px 0 4px}
+  .live .big{color:var(--new)}
+  .frame{font-size:14.5px;color:#33302a;border-left:3px solid var(--rule);padding-left:12px;margin:14px 0}
+  @media (max-width:680px){
+    .compare,.timeline{grid-template-columns:1fr}
+    .grid3{grid-template-columns:1fr}
+    .canvas-box{height:280px}
+    header{padding-top:48px}
+  }
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="logo" href="#top">Rent <span>Reset</span></a>
+  <a class="cta" href="#act">Write your MPP</a>
+</div></nav>
+
+<header id="top"><div class="wrap">
+  <div class="kicker">Toronto · 2026</div>
+  <h1>Same apartment.<br><em><span data-v="gap1">$…</span> more</em> a month.</h1>
+  <p class="lede">Toronto rents are falling, according to the headlines. But the moment you move, your rent resets to whatever the market will bear, and the person who stayed pays far less for the same kind of unit.</p>
+
+  <div class="compare">
+    <div class="stat new">
+      <div class="who">New tenant</div>
+      <div class="num" data-v="new1">$…</div>
+      <small>average 1-bedroom, per month</small>
+    </div>
+    <div class="stat sit">
+      <div class="who">Sitting tenant</div>
+      <div class="num" data-v="sit1">$…</div>
+      <small>average 1-bedroom, per month</small>
+    </div>
+  </div>
+  <p class="src">Toronto CMA, purpose-built rentals, <span data-v="cmhcPeriod">…</span>. Source: CMHC Rental Market Survey, turnover vs. non-turnover rents [5].</p>
+</div></header>
+
+<section id="gap"><div class="wrap">
+  <div class="kicker">The gap</div>
+  <h2>Moving costs you more, and the bigger the place, the bigger the gap.</h2>
+  <p>CMHC splits Toronto rents into two groups: units that got a new tenant in the past year, and units where the same tenant stayed. Across every size, the new tenant pays more.</p>
+
+  <div class="chart">
+    <div class="ttl">Average monthly rent, Toronto CMA, <span data-v="cmhcPeriod">…</span></div>
+    <div class="sub">New tenant (unit turned over) vs. sitting tenant, by unit size</div>
+    <div class="legend"><span><i style="background:var(--new)"></i>New tenant</span><span><i style="background:var(--sit)"></i>Sitting tenant</span></div>
+    <div class="canvas-box"><canvas id="gapChart" aria-label="Bar chart comparing new tenant and sitting tenant rents by unit size in Toronto" role="img"></canvas></div>
+    <p class="src">Source: CMHC Rental Market Report data tables, Table 6.0, Toronto CMA, <span data-v="cmhcPeriod">…</span> [5]. Updated yearly; latest release: <span data-v="cmhcRelease">…</span>.</p>
+  </div>
+
+  <h3 style="margin-top:28px">What it costs you to move</h3>
+  <div class="calc" role="group" aria-label="Choose unit size">
+    <button data-k="0">Studio</button>
+    <button data-k="1" aria-pressed="true">1-bedroom</button>
+    <button data-k="2">2-bedroom</button>
+    <button data-k="3">3-bedroom+</button>
+  </div>
+  <div class="calc-out" id="calcOut"></div>
+
+  <h3 style="margin-top:36px">The gap over time</h3>
+  <p>Sitting tenants' rent has gone up too. But in every year CMHC has published these figures, a new tenant in a 2-bedroom paid at least <span data-v="histMinGap">$…</span> a month more than a sitting tenant.</p>
+  <div class="chart">
+    <div class="ttl">Toronto 2-bedroom: new tenant vs. sitting tenant, every October</div>
+    <div class="sub">Average monthly rent, <span data-v="histRange">…</span></div>
+    <div class="legend"><span><i style="background:var(--new)"></i>New tenant</span><span><i style="background:var(--sit)"></i>Sitting tenant</span></div>
+    <div class="canvas-box"><canvas id="histChart" aria-label="Line chart of average 2-bedroom rent for new and sitting tenants in Toronto each October" role="img"></canvas></div>
+    <p class="src">Source: CMHC Rental Market Report data tables, Table 6.0, Toronto CMA, <span data-v="histEditions">…</span> editions [5]. In CMHC's data-table workbooks this table starts with the 2022 edition (October 2021), and covers only 2-bedroom units until the 2025 edition.</p>
+  </div>
+</div></section>
+
+<section id="why"><div class="wrap">
+  <div class="kicker">Why it happens</div>
+  <h2>Ontario's rent cap has two holes.</h2>
+  <p>Ontario does cap rent increases. For 2026 the cap is 2.1% [6]. But it only protects you while you stay put, and it doesn't cover newer buildings at all.</p>
+  <div class="grid3">
+    <div class="card"><div class="n">01 · VACANCY DECONTROL</div><p>When a tenant moves out, the landlord can set the next tenant's rent at any amount. The cap starts over from the new, higher number.</p></div>
+    <div class="card"><div class="n">02 · THE 2018 EXEMPTION</div><p>Units first occupied after November 15, 2018 aren't covered by the guideline at all [7]. Much of the new supply has no cap.</p></div>
+    <div class="card"><div class="n">03 · THE RESULT</div><p>Landlords earn more when a unit turns over, so tenants stay in places that no longer fit them because moving costs thousands a year.</p></div>
+  </div>
+</div></section>
+
+<section id="falling"><div class="wrap">
+  <div class="kicker">"But aren't rents falling?"</div>
+  <h2>Asking rents are down. That doesn't close the gap.</h2>
+  <p>It's true: advertised rents in Toronto have dropped from their <span data-v="peakYear">…</span> peak [2][1]. More supply is a good thing. But even after that drop, the average asking rent for a 2-bedroom is still about <span data-v="askPaidGap">$…</span> a month above what Toronto tenants actually pay on average [1][4]. The decline helps people who are about to move a little. It does nothing for the rule that resets your rent every time you do.</p>
+
+  <div class="chart">
+    <div class="ttl">Toronto 2-bedroom: asking rent vs. paid rent</div>
+    <div class="sub">Average monthly rent by quarter: what listings ask vs. what renters already in their homes pay</div>
+    <div class="legend"><span><i style="background:var(--new)"></i>Asking rent</span><span><i style="background:var(--sit)"></i>Paid rent</span></div>
+    <div class="canvas-box"><canvas id="askChart" aria-label="Line chart of Toronto 2-bedroom asking rent by quarter, compared with average paid rent" role="img"></canvas></div>
+    <p class="src">Source: Statistics Canada, Quarterly Rent Statistics, table 46-10-0092-01 and The Daily (Dec 2, 2025; Jun 9, 2026; Sep 9, 2026) [1][2][3][4]. Experimental estimates, subject to revision. Updated quarterly; latest release: <span data-v="scRelease">…</span>.</p>
+  </div>
+</div></section>
+
+<section id="bill60"><div class="wrap">
+  <div class="kicker">What changed on September 21, 2026</div>
+  <h2>Falling behind on rent now gives you half the time to catch up.</h2>
+  <p>Under Bill 60, once a landlord serves an N4 notice for unpaid rent, the tenant has 7 days to pay it off and keep the tenancy, down from 14 [8]. Every tenant who can't catch up in time loses a unit that then resets to market rent for the next person.</p>
+  <div class="timeline">
+    <div class="card"><div class="n">BEFORE</div><div class="big">14 days</div><p>to pay arrears after an N4 notice</p></div>
+    <div class="card after"><div class="n">SINCE SEPT 21, 2026</div><div class="big">7 days</div><p>to pay arrears after an N4 notice</p></div>
+  </div>
+</div></section>
+
+<section id="evictions"><div class="wrap">
+  <div class="kicker">Evictions for arrears</div>
+  <h2>Evictions for arrears: before and after Bill 60</h2>
+  <p>When a tenant doesn't pay off the arrears on an N4 notice, the landlord can file an L1, the application to evict for unpaid rent. Tribunals Ontario publishes how many L1s the Landlord and Tenant Board receives every quarter, for all of Ontario [12]. This is the baseline the shorter payment window will be measured against.</p>
+
+  <div class="chart">
+    <div class="ttl">L1 applications received by the Landlord and Tenant Board, Ontario</div>
+    <div class="sub">Eviction applications for unpaid rent, per quarter, all filing methods</div>
+    <div class="canvas-box"><canvas id="ltbChart" aria-label="Bar chart of L1 eviction applications for unpaid rent received by the Landlord and Tenant Board each quarter" role="img"></canvas></div>
+    <p class="src" id="ltbNotes"></p>
+    <p class="src">Source: Tribunals Ontario, Open Data, "LTB – Applications Received by e-File," quarterly files [12]. Numbers are subject to change. Updated quarterly; latest published quarter: <span data-v="ltbLatest">…</span>.</p>
+  </div>
+
+  <div class="timeline">
+    <div class="card"><div class="n">BEFORE · <span data-v="ltbLatest">…</span></div><div class="big" data-v="ltbLatestL1">…</div><p>L1 applications in the latest published quarter, all before the change</p></div>
+    <div class="card pending"><div class="n">AFTER · NOT YET RELEASED</div><div class="big">Pending</div><p>Counts for quarters after September 21, 2026 haven't been published yet. Jul–Sep 2026 includes only 10 days under the new rule; Oct–Dec 2026 will be the first full quarter.</p></div>
+  </div>
+</div></section>
+
+<section id="shelters"><div class="wrap">
+  <div class="kicker">What's at stake</div>
+  <h2>Toronto's shelters, updated automatically</h2>
+  <div class="live"><span class="big" data-v="occPct">…</span><span>of shelter beds and rooms were occupied <span data-v="occWhen">…</span> <span class="src">(<span data-v="occDetail">…</span>) [14]</span></span></div>
+  <p class="frame">This shows what's at stake when people lose their housing. It is not evidence that the rent gap causes homelessness.</p>
+
+  <div class="chart">
+    <div class="ttl">People actively experiencing homelessness in Toronto's shelter system</div>
+    <div class="sub">Monthly count, all people and people in families</div>
+    <div class="legend"><span><i style="background:var(--new)"></i>All population</span><span><i style="background:var(--sit)"></i>Families</span></div>
+    <div class="canvas-box"><canvas id="shelterChart" aria-label="Line chart of the monthly number of people actively experiencing homelessness in Toronto's shelter system, all population and families" role="img"></canvas></div>
+    <p class="src">Source: City of Toronto, Toronto Shelter System Flow and Daily Shelter &amp; Overnight Service Occupancy &amp; Capacity [13][14]. Counts people who used the shelter system at least once in the past three months and weren't discharged to permanent housing. People sleeping outdoors, or using overnight services the City doesn't fund, aren't included.</p>
+    <p class="src" id="shelterUpdated">Updated <span data-v="occDate">…</span> from Toronto Open Data (monthly counts through <span data-v="flowMonth">…</span>).</p>
+  </div>
+</div></section>
+
+<section id="young"><div class="wrap">
+  <div class="kicker">Who it hits</div>
+  <h2>Young people move more often, so they pay the reset more often.</h2>
+  <p>A first apartment, moving in with a partner, needing a room for a kid: every one of those means signing a new lease at the new-tenant price. And more young people are renters than a decade ago.</p>
+  <div class="chart">
+    <div class="ttl">Homeownership rate by age, Canada, 2011 vs. 2021</div>
+    <div class="sub">The drop is biggest for people in their late 20s and early 30s</div>
+    <div class="legend"><span><i style="background:#b9b1a2"></i>2011</span><span><i style="background:var(--new)"></i>2021</span></div>
+    <div class="canvas-box"><canvas id="ownChart" aria-label="Bar chart of homeownership rates by age, Canada, 2011 vs. 2021" role="img"></canvas></div>
+    <p class="src">Source: Statistics Canada, 2021 Census, The Daily, September 21, 2022 [10]. Census figures; next update with the 2026 Census.</p>
+  </div>
+  <div class="callout"><p>Ontario's total fertility rate was <b data-v="tfr">…</b> children per woman in <span data-v="tfrYear">…</span> [11]. Among women aged 20 to 24, the fertility rate fell <b data-v="asfrPct">…</b> between <span data-v="asfrFrom">…</span> [11]. Housing isn't the only reason people delay having kids, but it's one of the costs young families face every time they need more space.</p></div>
+  <p class="src">Fertility: Statistics Canada table 13-10-0418-01, updated yearly; latest release: <span data-v="fertRelease">…</span>.</p>
+</div></section>
+
+<section id="ny"><div class="wrap">
+  <div class="kicker">It's been done</div>
+  <h2>New York closed this hole in 2019.</h2>
+  <p>New York's Housing Stability and Tenant Protection Act ended vacancy decontrol for its regulated apartments, so rent no longer jumps just because a tenant leaves [9]. Ontario had a version of this protection before the late 1990s too, so this would be restoring something the province already had.</p>
+</div></section>
+
+<section id="ask-section"><div class="wrap">
+  <div class="kicker">What we're asking for</div>
+  <h2>Stop the reset.</h2>
+  <ol class="ask">
+    <li><h3>A public rent registry</h3><p style="margin:0">Landlords report the rent for each unit, so a new tenant can see what the last tenant paid. It's cheap, and it's needed before any other rule can be enforced.</p></li>
+    <li><h3>Vacancy control</h3><p style="margin:0">Cap how much rent can go up between one tenant and the next, for example the annual guideline plus a fixed margin, instead of letting it reset to any amount.</p></li>
+    <li><h3>Keep building</h3><p style="margin:0">Rent rules can discourage new construction, so new buildings would keep their exemption for a fixed number of years before the cap applies. That way developers can still recover their costs.</p></li>
+  </ol>
+</div></section>
+
+<section id="act"><div class="wrap">
+  <div class="kicker">Take action</div>
+  <h2>Send this to your MPP.</h2>
+  <p>It takes two minutes. Copy the letter, fill in the brackets, and email it to your MPP. Find yours by postal code on the Legislative Assembly's site.</p>
+  <div class="letter" id="letter">Subject: Ontario renters need vacancy control and a public rent registry
+
+Dear [MPP name],
+
+I'm a constituent in [your riding], and I'm writing about the gap between what new and existing tenants pay for rent in Toronto.
+
+According to CMHC, a new tenant in a Toronto one-bedroom paid an average of <span data-v="new1">$…</span> a month in <span data-v="cmhcPeriod">…</span>, while a sitting tenant paid <span data-v="sit1">$…</span>. That's <span data-v="yearGap">…</span> a year just for moving. This happens because rent resets to any amount between tenancies, and units first occupied after November 15, 2018 have no cap at all.
+
+I'm asking you to support:
+1. A public rent registry, so tenants can see what the previous tenant paid.
+2. Vacancy control that limits how much rent can rise between tenancies.
+3. A fixed-term exemption for new buildings, so new supply keeps coming.
+
+New York ended vacancy decontrol in 2019. Ontario can do the same.
+
+Thank you for your time. I'd appreciate a reply about where you stand.
+
+Sincerely,
+[Your name]
+[Your postal code]</div>
+  <div class="btns">
+    <button class="btn dark" id="copyBtn" type="button">Copy the letter</button>
+    <a class="btn line" href="https://www.ola.org/en/members/current" target="_blank" rel="noopener">Find your MPP ↗</a>
+  </div>
+  <p class="src" id="copyMsg" style="margin-top:10px" aria-live="polite"></p>
+</div></section>
+
+<section id="sources"><div class="wrap">
+  <div class="kicker">Sources</div>
+  <h2 style="font-size:32px">Where the numbers come from</h2>
+  <ol class="sources">
+    <li>Statistics Canada, The Daily, "Quarterly rent statistics, second quarter 2026," Sept 9, 2026. <a href="https://www150.statcan.gc.ca/n1/daily-quotidien/260909/dq260909c-eng.htm">statcan.gc.ca</a></li>
+    <li>Statistics Canada, The Daily, "Quarterly rent statistics, second and third quarters 2025," Dec 2, 2025. <a href="https://www150.statcan.gc.ca/n1/daily-quotidien/251202/dq251202b-eng.htm">statcan.gc.ca</a></li>
+    <li>Statistics Canada, The Daily, "Quarterly rent statistics, first quarter 2026," Jun 9, 2026. <a href="https://www150.statcan.gc.ca/n1/daily-quotidien/260609/dq260609c-eng.htm">statcan.gc.ca</a></li>
+    <li>Statistics Canada, Table 46-10-0092-01, Asking rent and paid rent prices, by rental unit type and number of bedrooms, experimental estimates. Toronto CMA, 1- and 2-bedroom apartments, 2019 onward. <a href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=4610009201">statcan.gc.ca</a></li>
+    <li>CMHC, Rental Market Report data tables (<span data-v="cmhcEdition">…</span>, Canada workbook), Table 6.0, Average rent for turnover and non-turnover units, Toronto CMA, released <span data-v="cmhcRelease">…</span>. <a href="https://www.cmhc-schl.gc.ca/professionals/housing-markets-data-and-research/housing-data/data-tables/rental-market/rental-market-report-data-tables">cmhc-schl.gc.ca</a></li>
+    <li>Government of Ontario, Rent increase guideline. <a href="https://www.ontario.ca/page/rent-increase-guideline">ontario.ca</a></li>
+    <li>Residential Tenancies Act, 2006, S.O. 2006, c. 17, s. 6.1. <a href="https://www.ontario.ca/laws/statute/06r17">ontario.ca/laws</a></li>
+    <li>Legislative Assembly of Ontario, Bill 60, Fighting Delays, Building Faster Act, 2025. <a href="https://www.ola.org/en/legislative-business/bills/parliament-44/session-1/bill-60">ola.org</a></li>
+    <li>New York State Senate, S6458, Housing Stability and Tenant Protection Act of 2019. <a href="https://www.nysenate.gov/legislation/bills/2019/S6458">nysenate.gov</a></li>
+    <li>Statistics Canada, The Daily, "To buy or to rent," 2021 Census, Sept 21, 2022. <a href="https://www150.statcan.gc.ca/n1/daily-quotidien/220921/dq220921b-eng.htm">statcan.gc.ca</a></li>
+    <li>Statistics Canada, Table 13-10-0418-01, Crude birth rate, age-specific fertility rates and total fertility rate (live births). Ontario, total fertility rate and age-specific rate for females 20 to 24. <a href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310041801">statcan.gc.ca</a></li>
+    <li>Tribunals Ontario, Open Data, "LTB – Applications Received by e-File," quarterly reports (L1, total applications received by all filing methods, Ontario). <a href="https://tribunalsontario.ca/en/about/open-data/">tribunalsontario.ca</a></li>
+    <li>City of Toronto, Open Data, Toronto Shelter System Flow (monthly). <a href="https://open.toronto.ca/dataset/toronto-shelter-system-flow/">open.toronto.ca</a></li>
+    <li>City of Toronto, Open Data, Daily Shelter &amp; Overnight Service Occupancy &amp; Capacity. <a href="https://open.toronto.ca/dataset/daily-shelter-overnight-service-occupancy-capacity/">open.toronto.ca</a></li>
+  </ol>
+  <p class="src">Every number on this page is loaded from files in the data/ folder, fetched from the sources above. See <a href="data/SOURCES.md">data/SOURCES.md</a> for exact tables, filters and retrieval dates.</p>
+</div></section>
+
+<footer><div class="wrap">
+  Rent Reset is a student advocacy project by Grigoriy Adamenko and Yi Hin, WRIT 2202, York University, 2026.
+</div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function(){
+  var NEW='#c8452c', SIT='#4f6d7a', OLD='#b9b1a2', INK='#1b1a17', MUTED='#6b665c', RULE='#e6dfd0';
+  var fmt=function(n){return '$'+n.toLocaleString('en-CA');};
+  var MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  // '2026-09-09' -> 'September 9, 2026'; '2025-10' -> 'October 2025'; anything else is shown as given
+  function niceDate(s){
+    var m=/^(\d{4})-(\d{2})(?:-(\d{2}))?/.exec(s||''); if(!m) return s||'';
+    return m[3] ? MONTHS[+m[2]-1]+' '+(+m[3])+', '+m[1] : MONTHS[+m[2]-1]+' '+m[1];
+  }
+  function setV(key,val){document.querySelectorAll('[data-v="'+key+'"]').forEach(function(el){el.textContent=val;});}
+  function load(name){return fetch('data/'+name,{cache:'no-cache'}).then(function(r){if(!r.ok) throw new Error(name+': HTTP '+r.status); return r.json();});}
+  function fail(canvasId,err){
+    var box=document.getElementById(canvasId); if(!box) return;
+    box.parentNode.innerHTML='<div class="err">Couldn’t load this chart’s data ('+String(err.message||err)+').</div>';
+    console.error(err);
+  }
+
+  // Copy letter
+  var btn=document.getElementById('copyBtn'), msg=document.getElementById('copyMsg');
+  btn.addEventListener('click',function(){
+    var t=document.getElementById('letter').innerText;
+    try{
+      navigator.clipboard.writeText(t).then(function(){msg.textContent='Copied. Paste it into an email and fill in the brackets.';},
+        function(){msg.textContent='Copy was blocked. Select the letter text and copy it manually.';});
+    }catch(e){msg.textContent='Copy was blocked. Select the letter text and copy it manually.';}
+  });
+
+  var hasChart=!!window.Chart;
+  if(hasChart){
+    Chart.defaults.font.family='"IBM Plex Sans",system-ui,sans-serif';
+    Chart.defaults.color=MUTED;
+    Chart.defaults.plugins.legend.display=false;
+    Chart.defaults.maintainAspectRatio=false;
+  }
+  var money={callback:function(v){return '$'+v.toLocaleString('en-CA');}};
+
+  // value labels plugin; a dataset can limit labels to some points with labelIdx
+  var labels={id:'labels',afterDatasetsDraw:function(c,args,opts){
+    var ctx=c.ctx; ctx.save(); var narrow=c.width<520; ctx.font='600 '+(narrow?'9.5':'12')+'px "IBM Plex Sans",sans-serif'; ctx.textAlign='center';
+    c.data.datasets.forEach(function(ds,i){
+      if(ds.noLabel) return;
+      c.getDatasetMeta(i).data.forEach(function(el,j){
+        var v=ds.data[j]; if(v==null) return;
+        if(ds.labelIdx && ds.labelIdx.indexOf(j)<0) return;
+        ctx.fillStyle=ds.labelColor||INK;
+        var r=el.options&&el.options.radius;
+        var off=r?r+6:7;
+        var txt=(narrow&&opts.short)?opts.short(v):(opts.prefix||'')+v.toLocaleString('en-CA')+(opts.suffix||'');
+        var w=ctx.measureText(txt).width/2+2, x=Math.min(Math.max(el.x,w),c.width-w);
+        ctx.fillText(txt, x, el.y-off);
+      });
+    });
+    ctx.restore();
+  }};
+  // only show a year label at each year's first point
+  // on narrow screens, only even years
+  function yearTicks(keys){return {color:INK,autoSkip:false,maxRotation:0,callback:function(v,i){
+    var k=keys[i], p=keys[i-1], y=+k.slice(0,4);
+    if(!(i===0||k.slice(0,4)!==p.slice(0,4))) return '';
+    if(this.chart.width<520 && y%2) return '';
+    return String(y);
+  }};}
+
+  // ---- CMHC: hero, calculator, gap chart, letter
+  load('cmhc_turnover.json').then(function(d){
+    var rows=d.by_size, one=rows.filter(function(r){return r.size==='1-bedroom';})[0];
+    var period=niceDate(d.meta.period);
+    setV('gap1',fmt(one.gap)); setV('new1',fmt(one.new_tenant)); setV('sit1',fmt(one.sitting_tenant));
+    setV('cmhcPeriod',period); setV('cmhcRelease',niceDate(d.meta.release_date)); setV('cmhcEdition',d.meta.edition);
+    var yr=one.gap*12, hundreds=Math.floor(yr/100)*100;
+    setV('yearGap',(yr>hundreds?'over ':'')+fmt(hundreds));
+
+    var sizes=rows.map(function(r){return r.size==='Studio'?'Studio':r.size;});
+    var newR=rows.map(function(r){return r.new_tenant;}), sitR=rows.map(function(r){return r.sitting_tenant;});
+    var out=document.getElementById('calcOut');
+    function show(k){
+      var g=newR[k]-sitR[k];
+      out.innerHTML='Moving into a '+sizes[k].toLowerCase()+' costs <b>'+fmt(g)+' more a month</b>, or <b>'+fmt(g*12)+' a year</b>, than staying in one.';
+      document.querySelectorAll('.calc button').forEach(function(b){b.setAttribute('aria-pressed', String(+b.dataset.k===k));});
+    }
+    document.querySelectorAll('.calc button').forEach(function(b){b.addEventListener('click',function(){show(+b.dataset.k);});});
+    show(1);
+
+    if(!hasChart) return;
+    var cv=document.getElementById('gapChart');
+    cv.setAttribute('aria-label','Bar chart of average monthly rent in Toronto, '+period+'. '+rows.map(function(r){return r.size+': new tenant '+fmt(r.new_tenant)+', sitting tenant '+fmt(r.sitting_tenant);}).join('; '));
+    new Chart(cv,{
+      type:'bar',
+      data:{labels:sizes,datasets:[
+        {label:'New tenant',data:newR,backgroundColor:NEW,borderRadius:5,labelColor:NEW},
+        {label:'Sitting tenant',data:sitR,backgroundColor:SIT,borderRadius:5,labelColor:SIT}
+      ]},
+      options:{
+        layout:{padding:{top:22}},
+        scales:{y:{beginAtZero:true,grid:{color:RULE},ticks:money},x:{grid:{display:false},ticks:{color:INK}}},
+        plugins:{labels:{prefix:'$',short:function(v){return '$'+(Math.round(v/10)/100).toFixed(2)+'k';}},tooltip:{callbacks:{label:function(c){return c.dataset.label+': '+fmt(c.raw);}}}}
+      },
+      plugins:[labels]
+    });
+    // history: 2-bedroom, each October
+    var h=d.two_bedroom_series;
+    setV('histRange','October '+h[0].period.slice(0,4)+' to October '+h[h.length-1].period.slice(0,4));
+    setV('histMinGap',fmt(Math.min.apply(null,h.map(function(x){return x.new_tenant-x.sitting_tenant;}))));
+    var eds=[]; h.forEach(function(x){if(eds.indexOf(x.edition)<0) eds.push(x.edition);});
+    setV('histEditions',eds.join(', '));
+    var hy=h.map(function(x){return x.period.slice(0,4);});
+    var hc=document.getElementById('histChart');
+    hc.setAttribute('aria-label','Line chart of average 2-bedroom rent in Toronto each October. '+h.map(function(x){return x.period.slice(0,4)+': new tenant '+fmt(x.new_tenant)+', sitting tenant '+fmt(x.sitting_tenant);}).join('; '));
+    new Chart(hc,{
+      type:'line',
+      data:{labels:hy,datasets:[
+        {label:'New tenant',data:h.map(function(x){return x.new_tenant;}),borderColor:NEW,backgroundColor:NEW,borderWidth:2,pointRadius:4,pointHoverRadius:6,tension:0,labelColor:NEW},
+        {label:'Sitting tenant',data:h.map(function(x){return x.sitting_tenant;}),borderColor:SIT,backgroundColor:SIT,borderWidth:2,pointRadius:4,pointHoverRadius:6,tension:0,labelColor:SIT}
+      ]},
+      options:{
+        layout:{padding:{top:22,right:12,left:6}},
+        interaction:{mode:'index',intersect:false},
+        scales:{y:{beginAtZero:true,grid:{color:RULE},ticks:money},x:{offset:true,grid:{display:false},ticks:{color:INK}}},
+        plugins:{labels:{prefix:'$',short:function(v){return '$'+(Math.round(v/10)/100).toFixed(2)+'k';}},tooltip:{callbacks:{
+          title:function(c){return 'October '+c[0].label;},
+          label:function(c){return c.dataset.label+': '+fmt(c.raw);},
+          footer:function(c){var x=h[c[0].dataIndex]; return 'Gap: '+fmt(x.new_tenant-x.sitting_tenant)+' a month';}}}}
+      },
+      plugins:[labels]
+    });
+  }).catch(function(e){fail('gapChart',e); fail('histChart',e); document.getElementById('calcOut').textContent='Data couldn’t be loaded.';});
+
+  // ---- StatCan asking vs paid
+  load('statcan_rents.json').then(function(d){
+    var s=d.series['2br'], last=s[s.length-1];
+    var peak=s.reduce(function(a,p){return p.asking>a.asking?p:a;},s[0]);
+    setV('peakYear',peak.ref_date.slice(0,4)); setV('askPaidGap',fmt(last.asking-last.paid));
+    setV('latestQ',last.quarter.replace(/^(\d{4}) (Q\d)$/,'$2 $1')); setV('scRelease',niceDate(d.meta.release_date));
+    if(!hasChart) return;
+    var keys=s.map(function(p){return p.quarter;}), n=s.length;
+    var pi=s.indexOf(peak);
+    var lab=[pi,n-1];
+    var cv=document.getElementById('askChart');
+    cv.setAttribute('aria-label','Line chart of Toronto 2-bedroom average asking rent by quarter from '+keys[0]+' to '+last.quarter+', peaking at '+fmt(peak.asking)+' in '+peak.quarter+' and at '+fmt(last.asking)+' in '+last.quarter+', compared with average paid rent rising from '+fmt(s[0].paid)+' to '+fmt(last.paid));
+    var all=s.map(function(p){return p.asking;}).concat(s.map(function(p){return p.paid;})).filter(function(v){return v!=null;});
+    new Chart(cv,{
+      type:'line',
+      data:{labels:keys,datasets:[
+        {label:'Asking rent',data:s.map(function(p){return p.asking;}),borderColor:NEW,backgroundColor:NEW,borderWidth:2,tension:0,labelColor:NEW,labelIdx:lab,
+          pointRadius:keys.map(function(k,i){return lab.indexOf(i)>=0?4:0;}),pointHoverRadius:5},
+        {label:'Paid rent',data:s.map(function(p){return p.paid;}),borderColor:SIT,backgroundColor:SIT,borderWidth:2,tension:0,labelColor:SIT,labelIdx:[n-1],
+          pointRadius:keys.map(function(k,i){return i===n-1?4:0;}),pointHoverRadius:5}
+      ]},
+      options:{
+        layout:{padding:{top:22,right:12}},
+        interaction:{mode:'index',intersect:false},
+        scales:{y:{min:Math.floor(Math.min.apply(null,all)/200)*200-200,max:Math.ceil(Math.max.apply(null,all)/200)*200,grid:{color:RULE},ticks:money},
+                x:{grid:{display:false},ticks:yearTicks(keys)}},
+        plugins:{labels:{prefix:'$'},tooltip:{filter:function(c){return c.raw!=null;},callbacks:{label:function(c){return c.dataset.label+': '+fmt(c.raw);}}}}
+      },
+      plugins:[labels]
+    });
+  }).catch(function(e){fail('askChart',e);});
+
+  // ---- Census homeownership
+  load('homeownership.json').then(function(d){
+    if(!hasChart) return;
+    var g=d.groups;
+    var cv=document.getElementById('ownChart');
+    cv.setAttribute('aria-label','Bar chart of homeownership rates, Canada: '+g.map(function(x){return 'ages '+x.age.replace(' to ','–')+' '+x.rate_2011+'% in 2011, '+x.rate_2021+'% in 2021';}).join('; '));
+    new Chart(cv,{
+      type:'bar',
+      data:{labels:g.map(function(x){return 'Ages '+x.age.replace(' to ','–');}),datasets:[
+        {label:'2011',data:g.map(function(x){return x.rate_2011;}),backgroundColor:OLD,borderRadius:5,labelColor:MUTED},
+        {label:'2021',data:g.map(function(x){return x.rate_2021;}),backgroundColor:NEW,borderRadius:5,labelColor:NEW}
+      ]},
+      options:{
+        layout:{padding:{top:22}},
+        scales:{y:{beginAtZero:true,max:90,grid:{color:RULE},ticks:{callback:function(v){return v+'%';}}},x:{grid:{display:false},ticks:{color:INK}}},
+        plugins:{labels:{suffix:'%'},tooltip:{callbacks:{label:function(c){return c.dataset.label+': '+c.raw+'% own their home';}}}}
+      },
+      plugins:[labels]
+    });
+  }).catch(function(e){fail('ownChart',e);});
+
+  // ---- Fertility
+  load('fertility.json').then(function(d){
+    var o=d.ontario, last=o[o.length-1], ch=d.asfr_20_24_change;
+    setV('tfr',last.tfr.toFixed(2)); setV('tfrYear',last.year);
+    setV('asfrPct',Math.abs(ch.pct).toFixed(1)+'%');
+    setV('asfrFrom',ch.from_year+' and '+ch.to_year+', from '+ch.from+' to '+ch.to+' births per 1,000 women');
+    setV('fertRelease',niceDate(d.meta.release_date));
+  }).catch(function(e){console.error(e);});
+
+  // ---- LTB L1 applications
+  load('ltb_applications.json').then(function(d){
+    var q=d.quarters, by={};
+    q.forEach(function(x){by[x.start.slice(0,7)]=x;});
+    // every quarter from the first to the last, so unpublished quarters show as gaps
+    var keys=[], y=+q[0].start.slice(0,4), m=+q[0].start.slice(5,7), endKey=q[q.length-1].start.slice(0,7);
+    while(true){ var k=y+'-'+(m<10?'0':'')+m; keys.push(k); if(k===endKey) break; m+=3; if(m>12){m-=12;y++;} }
+    var SHORT=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    function calLabel(k){var mm=+k.slice(5,7); return SHORT[mm-1]+'–'+SHORT[mm+1]+' '+k.slice(0,4);}
+    var last=q[q.length-1];
+    setV('ltbLatest',calLabel(last.start.slice(0,7))); setV('ltbLatestL1',last.L1.toLocaleString('en-CA'));
+    var missing=keys.filter(function(k){return !by[k];}).map(calLabel);
+    var partial=q.filter(function(x){return x.note&&/^partial/.test(x.note);});
+    var notes=[];
+    if(missing.length) notes.push('No file was published for '+missing.join(' or ')+' (gaps).');
+    partial.forEach(function(x){var r=x.note.match(/(\d{4}-\d{2}-\d{2}) to (\d{4}-\d{2}-\d{2})/); notes.push(calLabel(x.start.slice(0,7))+' is a partial quarter'+(r?' ('+niceDate(r[1])+' to '+niceDate(r[2])+')':'')+', shown lighter.');});
+    document.getElementById('ltbNotes').textContent=notes.join(' ');
+    if(!hasChart) return;
+    var cv=document.getElementById('ltbChart');
+    cv.setAttribute('aria-label','Bar chart of L1 eviction applications for unpaid rent received by the Landlord and Tenant Board each quarter, Ontario, '+calLabel(keys[0])+' to '+calLabel(endKey)+'. Latest quarter: '+last.L1.toLocaleString('en-CA')+'.');
+    var vals=keys.map(function(k){return by[k]?by[k].L1:null;});
+    new Chart(cv,{
+      type:'bar',
+      data:{labels:keys,datasets:[{label:'L1 applications',data:vals,borderRadius:3,noLabel:true,
+        backgroundColor:keys.map(function(k){return by[k]&&by[k].note&&/^partial/.test(by[k].note)?OLD:SIT;})}]},
+      options:{
+        layout:{padding:{top:22,right:12}},
+        scales:{y:{beginAtZero:true,grid:{color:RULE},ticks:{callback:function(v){return v.toLocaleString('en-CA');}}},
+                x:{grid:{display:false},ticks:yearTicks(keys)}},
+        plugins:{labels:{},tooltip:{callbacks:{
+          title:function(c){var k=keys[c[0].dataIndex]; return calLabel(k)+(by[k]?' (LTB fiscal '+by[k].fiscal_label+')':'');},
+          label:function(c){return c.raw==null?'not published':c.raw.toLocaleString('en-CA')+' L1 applications';},
+          afterLabel:function(c){var x=by[keys[c.dataIndex]]; return x&&x.note?x.note:'';}}}}
+      },
+      plugins:[labels]
+    });
+  }).catch(function(e){fail('ltbChart',e);});
+
+  // ---- Toronto shelters
+  Promise.all([load('shelter_flow.json'),load('shelter_occupancy.json')]).then(function(r){
+    var f=r[0], o=r[1];
+    var yest=new Date(); yest.setDate(yest.getDate()-1);
+    var ymd=yest.getFullYear()+'-'+String(yest.getMonth()+1).padStart(2,'0')+'-'+String(yest.getDate()).padStart(2,'0');
+    setV('occPct',o.combined_pct.toFixed(1)+'%');
+    setV('occWhen',o.date===ymd?'last night':'on the night of '+niceDate(o.date));
+    setV('occDetail',o.beds.occupied.toLocaleString('en-CA')+' of '+o.beds.actual_capacity.toLocaleString('en-CA')+' beds and '+o.rooms.occupied.toLocaleString('en-CA')+' of '+o.rooms.actual_capacity.toLocaleString('en-CA')+' rooms, '+niceDate(o.date));
+    setV('occDate',niceDate(o.date)); setV('flowMonth',niceDate(f.meta.flow_latest_month));
+    if(!hasChart) return;
+    var keys=[], all={}, fam={};
+    f.months.forEach(function(x){ if(keys.indexOf(x.month)<0) keys.push(x.month); (x.population_group==='Families'?fam:all)[x.month]=x.actively_homeless; });
+    var n=keys.length;
+    new Chart(document.getElementById('shelterChart'),{
+      type:'line',
+      data:{labels:keys,datasets:[
+        {label:'All population',data:keys.map(function(k){return all[k]==null?null:all[k];}),borderColor:NEW,backgroundColor:NEW,borderWidth:2,pointRadius:keys.map(function(k,i){return i===n-1?4:0;}),pointHoverRadius:5,tension:0,labelColor:NEW,labelIdx:[n-1]},
+        {label:'Families',data:keys.map(function(k){return fam[k]==null?null:fam[k];}),borderColor:SIT,backgroundColor:SIT,borderWidth:2,pointRadius:keys.map(function(k,i){return i===n-1?4:0;}),pointHoverRadius:5,tension:0,labelColor:SIT,labelIdx:[n-1]}
+      ]},
+      options:{
+        layout:{padding:{top:22,right:12}},
+        interaction:{mode:'index',intersect:false},
+        scales:{y:{beginAtZero:true,grid:{color:RULE},ticks:{callback:function(v){return v.toLocaleString('en-CA');}}},x:{grid:{display:false},ticks:yearTicks(keys)}},
+        plugins:{labels:{},tooltip:{callbacks:{title:function(c){return niceDate(keys[c[0].dataIndex]);},label:function(c){return c.dataset.label+': '+c.raw.toLocaleString('en-CA');}}}}
+      },
+      plugins:[labels]
+    });
+  }).catch(function(e){fail('shelterChart',e);});
+})();
+</script>
+</body>
+</html>
