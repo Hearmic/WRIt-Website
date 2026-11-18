@@ -1,8 +1,8 @@
 {
  "meta": {
   "flow_resource_id": "fb32967d-ee16-4d46-a880-0614c18f2137",
-  "flow_latest_month": "2026-09",
-  "flow_last_refreshed": "2026-10-15 20:04:37.617705"
+  "flow_latest_month": "2026-10",
+  "flow_last_refreshed": "2026-11-16 20:04:46.466977"
  },
  "months": [
   {
@@ -4412,6 +4412,48 @@
    "age65over": 14,
    "gender_male": 780,
    "gender_female": 1180,
+   "gender_transgender,non-binary_or_two_spirit": 2,
+   "population_group_percentage": "23.7%"
+  },
+  {
+   "month": "2026-10",
+   "population_group": "All Population",
+   "returned_from_housing": 38,
+   "returned_to_shelter": 225,
+   "newly_identified": 343,
+   "moved_to_housing": 416,
+   "became_inactive": 438,
+   "actively_homeless": 8010,
+   "ageunder16": 934,
+   "age16-24": 1147,
+   "age25-34": 1374,
+   "age35-44": 1701,
+   "age45-54": 1212,
+   "age55-64": 1019,
+   "age65over": 623,
+   "gender_male": 4714,
+   "gender_female": 3153,
+   "gender_transgender,non-binary_or_two_spirit": 143,
+   "population_group_percentage": "100.0%"
+  },
+  {
+   "month": "2026-10",
+   "population_group": "Families",
+   "returned_from_housing": 3,
+   "returned_to_shelter": 11,
+   "newly_identified": 95,
+   "moved_to_housing": 139,
+   "became_inactive": 23,
+   "actively_homeless": 1901,
+   "ageunder16": 934,
+   "age16-24": 235,
+   "age25-34": 192,
+   "age35-44": 330,
+   "age45-54": 151,
+   "age55-64": 46,
+   "age65over": 13,
+   "gender_male": 764,
+   "gender_female": 1135,
    "gender_transgender,non-binary_or_two_spirit": 2,
    "population_group_percentage": "23.7%"
   }
