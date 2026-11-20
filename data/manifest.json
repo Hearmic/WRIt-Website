@@ -127,8 +127,8 @@
   }
  },
  "F": {
-  "retrieved": "2026-11-19",
-  "processed_sha256": "80723f74f667c5024c6c8a5da8e0da02ac520c4ec0b91e0512f6ab276080ada0",
+  "retrieved": "2026-11-20",
+  "processed_sha256": "932f91f573e3b7ae88072806e8fdc49bbff5b11161d348f9ec6305514a9b29b0",
   "raw_files": [
    "daily_shelter_occupancy_latest_day.json",
    "daily_shelter_occupancy_package.json",
@@ -144,8 +144,8 @@
    "flow_latest_month": "2026-10",
    "flow_last_refreshed": "2026-11-16 20:04:46.466977",
    "occupancy_resource_id": "42714176-4f05-44e6-b157-2b57f29b856a",
-   "occupancy_date": "2026-11-18",
-   "occupancy_last_refreshed": "2026-11-19 14:22:59.629656"
+   "occupancy_date": "2026-11-19",
+   "occupancy_last_refreshed": "2026-11-20 14:22:54.743978"
   }
  },
  "E": {
