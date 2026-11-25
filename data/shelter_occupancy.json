@@ -1,22 +1,22 @@
 {
  "meta": {
   "occupancy_resource_id": "42714176-4f05-44e6-b157-2b57f29b856a",
-  "occupancy_date": "2026-11-23",
-  "occupancy_last_refreshed": "2026-11-24 14:23:23.829276"
+  "occupancy_date": "2026-11-24",
+  "occupancy_last_refreshed": "2026-11-25 14:23:44.153408"
  },
- "date": "2026-11-23",
- "programs": 137,
+ "date": "2026-11-24",
+ "programs": 138,
  "beds": {
-  "occupied": 3755,
-  "actual_capacity": 4073,
-  "pct": 92.2
+  "occupied": 3809,
+  "actual_capacity": 4114,
+  "pct": 92.6
  },
  "rooms": {
-  "occupied": 1919,
-  "actual_capacity": 1935,
-  "pct": 99.2
+  "occupied": 1929,
+  "actual_capacity": 1943,
+  "pct": 99.3
  },
- "combined_pct": 94.4,
+ "combined_pct": 94.7,
  "resource_id": "42714176-4f05-44e6-b157-2b57f29b856a",
  "resource_name": "Daily shelter overnight occupancy"
 }
