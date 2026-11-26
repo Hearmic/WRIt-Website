@@ -1,20 +1,20 @@
 {
  "meta": {
   "occupancy_resource_id": "42714176-4f05-44e6-b157-2b57f29b856a",
-  "occupancy_date": "2026-11-24",
-  "occupancy_last_refreshed": "2026-11-25 14:23:44.153408"
+  "occupancy_date": "2026-11-25",
+  "occupancy_last_refreshed": "2026-11-26 14:23:47.742185"
  },
- "date": "2026-11-24",
+ "date": "2026-11-25",
  "programs": 138,
  "beds": {
-  "occupied": 3809,
-  "actual_capacity": 4114,
+  "occupied": 3808,
+  "actual_capacity": 4111,
   "pct": 92.6
  },
  "rooms": {
-  "occupied": 1929,
-  "actual_capacity": 1943,
-  "pct": 99.3
+  "occupied": 1928,
+  "actual_capacity": 1947,
+  "pct": 99.0
  },
  "combined_pct": 94.7,
  "resource_id": "42714176-4f05-44e6-b157-2b57f29b856a",

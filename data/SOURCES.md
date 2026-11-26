@@ -63,8 +63,8 @@ same numbers leaves the date (and the files) alone. Raw downloads are in `data/r
 
 - Base: `https://ckan0.cf.opendata.inter.prod-toronto.ca/api/3/action/`
 - Toronto Shelter System Flow: `datastore_search?resource_id=fb32967d-ee16-4d46-a880-0614c18f2137` (all records, limit 500 + offset). Kept population_group "All Population" and "Families". Latest month: 2026-10; dataset refreshed 2026-11-16 20:04:46.466977.
-- Daily Shelter & Overnight Service Occupancy & Capacity: `package_show?id=daily-shelter-overnight-service-occupancy-capacity` → current-year datastore resource `42714176-4f05-44e6-b157-2b57f29b856a`; records for the latest OCCUPANCY_DATE (2026-11-24). Occupancy % = (sum OCCUPIED_BEDS + sum OCCUPIED_ROOMS) ÷ (sum CAPACITY_ACTUAL_BED + sum CAPACITY_ACTUAL_ROOM); beds and rooms are also reported separately.
-- Retrieved: 2026-11-25 (re-fetched daily)
+- Daily Shelter & Overnight Service Occupancy & Capacity: `package_show?id=daily-shelter-overnight-service-occupancy-capacity` → current-year datastore resource `42714176-4f05-44e6-b157-2b57f29b856a`; records for the latest OCCUPANCY_DATE (2026-11-25). Occupancy % = (sum OCCUPIED_BEDS + sum OCCUPIED_ROOMS) ÷ (sum CAPACITY_ACTUAL_BED + sum CAPACITY_ACTUAL_ROOM); beds and rooms are also reported separately.
+- Retrieved: 2026-11-26 (re-fetched daily)
 - Raw: `data/raw/toronto_shelter_system_flow_pages.json`, `data/raw/daily_shelter_occupancy_latest_day.json`, `data/raw/daily_shelter_occupancy_package.json` · Processed: `shelter_flow.csv`, `shelter_flow.json`, `shelter_occupancy.json`
 - Used by: "Toronto's shelters, updated automatically".
 
